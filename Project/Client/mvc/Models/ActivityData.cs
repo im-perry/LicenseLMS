@@ -7,12 +7,23 @@ namespace mvc.Models
 {
     public class ActivityData
     {
-        public DateTime Date { get; set; }
+        public enum LevelType
+        {
+            License,
+            Master
+        }
 
-        public int TemperatureC { get; set; }
-
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-
-        public string Summary { get; set; }
+        public enum ActivityType
+        {
+            Course,
+            Seminary,
+            Labour
+        }
+        public Guid ActivityId { get; set; }
+        public string Name { get; set; }
+        public int Duration { get; set; }
+        public int Year { get; set; }
+        public LevelType Level { get; set; }
+        public ActivityType Type { get; set; }
     }
 }

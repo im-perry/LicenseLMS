@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\peris\\Desktop\\Project\\Client\\activitiesapi\\activitiesapi.csproj": {}
+    "D:\\Facultate\\LicenseLMS\\Project\\Client\\activitiesapi\\activitiesapi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\peris\\Desktop\\Project\\Client\\activitiesapi\\activitiesapi.csproj": {
+    "D:\\Facultate\\LicenseLMS\\Project\\Client\\activitiesapi\\activitiesapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\peris\\Desktop\\Project\\Client\\activitiesapi\\activitiesapi.csproj",
+        "projectUniqueName": "D:\\Facultate\\LicenseLMS\\Project\\Client\\activitiesapi\\activitiesapi.csproj",
         "projectName": "activitiesapi",
-        "projectPath": "C:\\Users\\peris\\Desktop\\Project\\Client\\activitiesapi\\activitiesapi.csproj",
+        "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\activitiesapi\\activitiesapi.csproj",
         "packagesPath": "C:\\Users\\peris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\peris\\Desktop\\Project\\Client\\activitiesapi\\obj\\",
+        "outputPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\activitiesapi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\peris\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,24 @@
             "IdentityServer4.AccessTokenValidation": {
               "target": "Package",
               "version": "[3.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
             }
           },
           "imports": [

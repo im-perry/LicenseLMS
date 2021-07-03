@@ -84,6 +84,14 @@ namespace IdentityServer
           {
         new ApiScope("activitiesapi.read"),
         new ApiScope("activitiesapi.write"),
+        new ApiScope("groupsapi.read"),
+        new ApiScope("groupsapi.write"),
+        new ApiScope("roomsmanagementapi.read"),
+        new ApiScope("roomsmanagementapi.write"),
+        new ApiScope("scheduleapi.read"),
+        new ApiScope("scheduleapi.write"),
+        new ApiScope("teachingapi.read"),
+        new ApiScope("teachingapi.write")
           };
         public static IEnumerable<ApiResource> ApiResources => new[]
         {
@@ -92,42 +100,68 @@ namespace IdentityServer
         Scopes = new List<string> { "activitiesapi.read", "activitiesapi.write"},
         ApiSecrets = new List<Secret> {new Secret("ScopeSecret".Sha256())},
         UserClaims = new List<string> {"role"}
+      },
+      new ApiResource("groupsapi")
+      {
+        Scopes = new List<string> { "groupsapi.read", "groupsapi.write"},
+        ApiSecrets = new List<Secret> {new Secret("ScopeSecret".Sha256())},
+        UserClaims = new List<string> {"role"}
+      },
+      new ApiResource("roomsmanagementapi")
+      {
+        Scopes = new List<string> { "roomsmanagementapi.read", "roomsmanagementapi.write"},
+        ApiSecrets = new List<Secret> {new Secret("ScopeSecret".Sha256())},
+        UserClaims = new List<string> {"role"}
+      },
+      new ApiResource("scheduleapi")
+      {
+        Scopes = new List<string> { "scheduleapi.read", "scheduleapi.write"},
+        ApiSecrets = new List<Secret> {new Secret("ScopeSecret".Sha256())},
+        UserClaims = new List<string> {"role"}
+      },
+      new ApiResource("teachingapi")
+      {
+        Scopes = new List<string> { "teachingapi.read", "teachingapi.write"},
+        ApiSecrets = new List<Secret> {new Secret("ScopeSecret".Sha256())},
+        UserClaims = new List<string> {"role"}
       }
     };
 
         public static IEnumerable<Client> Clients =>
           new[]
           {
-        // m2m client credentials flow client
-        new Client
-        {
-          ClientId = "m2m.client",
-          ClientName = "Client Credentials Client",
+            // m2m client credentials flow client
+            new Client
+            {
+              ClientId = "m2m.client",
+              ClientName = "Client Credentials Client",
 
-          AllowedGrantTypes = GrantTypes.ClientCredentials,
-          ClientSecrets = {new Secret("SuperSecretPassword".Sha256())},
+              AllowedGrantTypes = GrantTypes.ClientCredentials,
+              ClientSecrets = {new Secret("SuperSecretPassword".Sha256())},
 
-          AllowedScopes = { "activitiesapi.read", "activitiesapi.write" }
-        },
+              AllowedScopes = { "activitiesapi.read", "activitiesapi.write", "groupsapi.read", "groupsapi.write",
+                "roomsmanagementapi.read", "roomsmanagementapi.write", "scheduleapi.read", "scheduleapi.write", "teachingapi.read", "teachingapi.write"}
+            },
 
-        // interactive client using code flow + pkce
-        new Client
-        {
-          ClientId = "interactive",
-          ClientSecrets = {new Secret("SuperSecretPassword".Sha256())},
+            // interactive client using code flow + pkce
+            new Client
+            {
+              ClientId = "interactive",
+              ClientSecrets = {new Secret("SuperSecretPassword".Sha256())},
 
-          AllowedGrantTypes = GrantTypes.Code,
+              AllowedGrantTypes = GrantTypes.Code,
 
-          RedirectUris = {"https://localhost:5444/signin-oidc"},
-          FrontChannelLogoutUri = "https://localhost:5444/signout-oidc",
-          PostLogoutRedirectUris = {"https://localhost:5444/signout-callback-oidc"},
+              RedirectUris = {"https://localhost:5444/signin-oidc"},
+              FrontChannelLogoutUri = "https://localhost:5444/signout-oidc",
+              PostLogoutRedirectUris = {"https://localhost:5444/signout-callback-oidc"},
 
-          AllowOfflineAccess = true,
-          AllowedScopes = {"openid", "profile", "activitiesapi.read"},
-          RequirePkce = true,
-          RequireConsent = true,
-          AllowPlainTextPkce = false
-        },
+              AllowOfflineAccess = true,
+              AllowedScopes = {"openid", "profile", "activitiesapi.read", "groupsapi.read", "roomsmanagementapi.read",
+                "scheduleapi.read", "teachingapi.read"},
+              RequirePkce = true,
+              RequireConsent = true,
+              AllowPlainTextPkce = false
+            },
           };
     }
 }

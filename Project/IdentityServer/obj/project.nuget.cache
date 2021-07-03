@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "C2hl7n9XPG1mIkHmH8+qe7jfjR1YxAfK7k6Nedh4TXTEW3jySZgVccvz8FayPClVpQyO7B6AkzRz1cvhTNeePA==",
+  "dgSpecHash": "I8pO8oTZtBEY1w4ZX4Q3N6aqL0QjDYQprLki1KOoZ3pr7sbvbWm7VQ4M8x2TU2ECtryTQRPdbe7hp6NwJbxTCQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\peris\\Desktop\\Project\\IdentityServer\\IdentityServer.csproj",
+  "projectFilePath": "D:\\Facultate\\LicenseLMS\\Project\\IdentityServer\\IdentityServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\peris\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\peris\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

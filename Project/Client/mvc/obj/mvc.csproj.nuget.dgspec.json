@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\peris\\Desktop\\Project\\Client\\mvc\\mvc.csproj": {}
+    "D:\\Facultate\\LicenseLMS\\Project\\Client\\mvc\\mvc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\peris\\Desktop\\Project\\Client\\mvc\\mvc.csproj": {
+    "D:\\Facultate\\LicenseLMS\\Project\\Client\\activitiesapi\\activitiesapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\peris\\Desktop\\Project\\Client\\mvc\\mvc.csproj",
-        "projectName": "mvc",
-        "projectPath": "C:\\Users\\peris\\Desktop\\Project\\Client\\mvc\\mvc.csproj",
+        "projectUniqueName": "D:\\Facultate\\LicenseLMS\\Project\\Client\\activitiesapi\\activitiesapi.csproj",
+        "projectName": "activitiesapi",
+        "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\activitiesapi\\activitiesapi.csproj",
         "packagesPath": "C:\\Users\\peris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\peris\\Desktop\\Project\\Client\\mvc\\obj\\",
+        "outputPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\activitiesapi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\peris\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,184 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "IdentityServer4.AccessTokenValidation": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Facultate\\LicenseLMS\\Project\\Client\\groupsapi\\groupsapi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Facultate\\LicenseLMS\\Project\\Client\\groupsapi\\groupsapi.csproj",
+        "projectName": "groupsapi",
+        "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\groupsapi\\groupsapi.csproj",
+        "packagesPath": "C:\\Users\\peris\\.nuget\\packages\\",
+        "outputPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\groupsapi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\peris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "IdentityServer4.AccessTokenValidation": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Facultate\\LicenseLMS\\Project\\Client\\mvc\\mvc.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Facultate\\LicenseLMS\\Project\\Client\\mvc\\mvc.csproj",
+        "projectName": "mvc",
+        "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\mvc\\mvc.csproj",
+        "packagesPath": "C:\\Users\\peris\\.nuget\\packages\\",
+        "outputPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\mvc\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\peris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\activitiesapi\\activitiesapi.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\activitiesapi\\activitiesapi.csproj"
+              },
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\groupsapi\\groupsapi.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\groupsapi\\groupsapi.csproj"
+              },
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\roomsmanagementapi\\roomsmanagementapi.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\roomsmanagementapi\\roomsmanagementapi.csproj"
+              },
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\scheduleapi\\scheduleapi.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\scheduleapi\\scheduleapi.csproj"
+              },
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\teachingapi\\teachingapi.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\teachingapi\\teachingapi.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
             "IdentityModel": {
               "target": "Package",
               "version": "[5.1.0, )"
@@ -48,9 +226,287 @@
               "target": "Package",
               "version": "[5.0.6, )"
             },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Facultate\\LicenseLMS\\Project\\Client\\roomsmanagementapi\\roomsmanagementapi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Facultate\\LicenseLMS\\Project\\Client\\roomsmanagementapi\\roomsmanagementapi.csproj",
+        "projectName": "roomsmanagementapi",
+        "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\roomsmanagementapi\\roomsmanagementapi.csproj",
+        "packagesPath": "C:\\Users\\peris\\.nuget\\packages\\",
+        "outputPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\roomsmanagementapi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\peris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "IdentityServer4.AccessTokenValidation": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Facultate\\LicenseLMS\\Project\\Client\\scheduleapi\\scheduleapi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Facultate\\LicenseLMS\\Project\\Client\\scheduleapi\\scheduleapi.csproj",
+        "projectName": "scheduleapi",
+        "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\scheduleapi\\scheduleapi.csproj",
+        "packagesPath": "C:\\Users\\peris\\.nuget\\packages\\",
+        "outputPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\scheduleapi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\peris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\activitiesapi\\activitiesapi.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\activitiesapi\\activitiesapi.csproj"
+              },
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\groupsapi\\groupsapi.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\groupsapi\\groupsapi.csproj"
+              },
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\roomsmanagementapi\\roomsmanagementapi.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\roomsmanagementapi\\roomsmanagementapi.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "IdentityServer4.AccessTokenValidation": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Facultate\\LicenseLMS\\Project\\Client\\teachingapi\\teachingapi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Facultate\\LicenseLMS\\Project\\Client\\teachingapi\\teachingapi.csproj",
+        "projectName": "teachingapi",
+        "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\teachingapi\\teachingapi.csproj",
+        "packagesPath": "C:\\Users\\peris\\.nuget\\packages\\",
+        "outputPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\teachingapi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\peris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\activitiesapi\\activitiesapi.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\activitiesapi\\activitiesapi.csproj"
+              },
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\groupsapi\\groupsapi.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\groupsapi\\groupsapi.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "IdentityServer4.AccessTokenValidation": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
             }
           },
           "imports": [

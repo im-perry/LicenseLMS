@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\peris\\Desktop\\Project\\IdentityServer\\IdentityServer.csproj": {}
+    "D:\\Facultate\\LicenseLMS\\Project\\IdentityServer\\IdentityServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\peris\\Desktop\\Project\\IdentityServer\\IdentityServer.csproj": {
+    "D:\\Facultate\\LicenseLMS\\Project\\IdentityServer\\IdentityServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\peris\\Desktop\\Project\\IdentityServer\\IdentityServer.csproj",
+        "projectUniqueName": "D:\\Facultate\\LicenseLMS\\Project\\IdentityServer\\IdentityServer.csproj",
         "projectName": "IdentityServer",
-        "projectPath": "C:\\Users\\peris\\Desktop\\Project\\IdentityServer\\IdentityServer.csproj",
+        "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\IdentityServer\\IdentityServer.csproj",
         "packagesPath": "C:\\Users\\peris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\peris\\Desktop\\Project\\IdentityServer\\obj\\",
+        "outputPath": "D:\\Facultate\\LicenseLMS\\Project\\IdentityServer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\peris\\AppData\\Roaming\\NuGet\\NuGet.Config",

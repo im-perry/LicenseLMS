@@ -1,4 +1,5 @@
 ﻿using IdentityModel.Client;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -35,6 +36,13 @@ namespace mvc.Controllers
             return View();
         }
 
+        
+
+        public async Task Logout()
+        {
+            await HttpContext.SignOutAsync("cookie");
+            await HttpContext.SignOutAsync("oidc");
+        }
 
         [Authorize]
         public async Task<IActionResult> Activities()
@@ -49,7 +57,131 @@ namespace mvc.Controllers
                     .SetBearerToken(tokenResponse.AccessToken);
 
                 var result = client
-                    .GetAsync("https://localhost:5445/weatherforecast")
+                    .GetAsync("https://localhost:5445/activities")
+                    .Result;
+
+                if (result.IsSuccessStatusCode)
+                {
+                    var model = result.Content.ReadAsStringAsync().Result;
+
+                    data = JsonConvert.DeserializeObject<List<ActivityData>>(model);
+
+                    return View(data);
+                }
+                else
+                {
+                    throw new Exception("Unable to get content");
+                }
+            }
+        }
+
+        [Authorize]
+        public async Task<IActionResult> Groups()
+        {
+            var data = new List<ActivityData>();
+
+            using (var client = new HttpClient())
+            {
+                var tokenResponse = await _tokenService.GetToken("groupsapi.read");
+
+                client
+                    .SetBearerToken(tokenResponse.AccessToken);
+
+                var result = client
+                    .GetAsync("https://localhost:5446/groups")
+                    .Result;
+
+                if (result.IsSuccessStatusCode)
+                {
+                    var model = result.Content.ReadAsStringAsync().Result;
+
+                    data = JsonConvert.DeserializeObject<List<ActivityData>>(model);
+
+                    return View(data);
+                }
+                else
+                {
+                    throw new Exception("Unable to get content");
+                }
+            }
+        }
+
+        [Authorize]
+        public async Task<IActionResult> RoomsManagement()
+        {
+            var data = new List<ActivityData>();
+
+            using (var client = new HttpClient())
+            {
+                var tokenResponse = await _tokenService.GetToken("roomsmanagementapi.read");
+
+                client
+                    .SetBearerToken(tokenResponse.AccessToken);
+
+                var result = client
+                    .GetAsync("https://localhost:5447/rooms")
+                    .Result;
+
+                if (result.IsSuccessStatusCode)
+                {
+                    var model = result.Content.ReadAsStringAsync().Result;
+
+                    data = JsonConvert.DeserializeObject<List<ActivityData>>(model);
+
+                    return View(data);
+                }
+                else
+                {
+                    throw new Exception("Unable to get content");
+                }
+            }
+        }
+
+        [Authorize]
+        public async Task<IActionResult> Schedule()
+        {
+            var data = new List<ActivityData>();
+
+            using (var client = new HttpClient())
+            {
+                var tokenResponse = await _tokenService.GetToken("scheduleapi.read");
+
+                client
+                    .SetBearerToken(tokenResponse.AccessToken);
+
+                var result = client
+                    .GetAsync("https://localhost:5448/schedule")
+                    .Result;
+
+                if (result.IsSuccessStatusCode)
+                {
+                    var model = result.Content.ReadAsStringAsync().Result;
+
+                    data = JsonConvert.DeserializeObject<List<ActivityData>>(model);
+
+                    return View(data);
+                }
+                else
+                {
+                    throw new Exception("Unable to get content");
+                }
+            }
+        }
+
+        [Authorize]
+        public async Task<IActionResult> Teaching()
+        {
+            var data = new List<ActivityData>();
+
+            using (var client = new HttpClient())
+            {
+                var tokenResponse = await _tokenService.GetToken("teachingapi.read");
+
+                client
+                    .SetBearerToken(tokenResponse.AccessToken);
+
+                var result = client
+                    .GetAsync("https://localhost:5449/teaching")
                     .Result;
 
                 if (result.IsSuccessStatusCode)
