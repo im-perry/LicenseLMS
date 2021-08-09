@@ -25,19 +25,13 @@
                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Activities">Teaching</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Activities" asp-action="Index">Activities</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Activities">Activities</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Groups" asp-action="Index">Groups</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Activities">Groups</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Activities">Rooms</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Activities">Schedule</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Activities">ActivitiesHome</a>
                         </li>
                         @{
                             if (!true.Equals(ViewData["signed-out"]))

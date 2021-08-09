@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="IdentityModel" Version="5.1.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="5.0.6" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.6">
@@ -23,10 +24,6 @@
     <ProjectReference Include="..\roomsmanagementapi\roomsmanagementapi.csproj" />
     <ProjectReference Include="..\scheduleapi\scheduleapi.csproj" />
     <ProjectReference Include="..\teachingapi\teachingapi.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Views\Activities\" />
   </ItemGroup>
 
 </Project>

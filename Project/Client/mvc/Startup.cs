@@ -45,7 +45,6 @@ namespace mvc
                     options.Scope.Add(Configuration["InteractiveServiceSettings:Scopes:0"]);
                     options.SaveTokens = true;
 
-
                 });
 
             services.Configure<IdentityServerSettings>(Configuration.GetSection("IdentityServerSettings"));

@@ -9,7 +9,7 @@ namespace activitiesapi.Repositories
 {
     public interface IActivityRepository
     {
-        Activity GetActivityById(Guid accountId);
+        Activity GetActivityById(Guid activityId);
         IEnumerable<Activity> GetAll();
         void Add(Activity activity);
         void Delete(Guid activityId);

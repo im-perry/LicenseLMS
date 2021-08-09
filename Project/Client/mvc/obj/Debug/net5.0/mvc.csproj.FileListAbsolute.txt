@@ -245,3 +245,7 @@ D:\Facultate\LicenseLMS\Project\Client\mvc\bin\Debug\net5.0\scheduleapi.pdb
 D:\Facultate\LicenseLMS\Project\Client\mvc\bin\Debug\net5.0\teachingapi.pdb
 D:\Facultate\LicenseLMS\Project\Client\mvc\obj\Debug\net5.0\mvc.MvcApplicationPartsAssemblyInfo.cs
 D:\Facultate\LicenseLMS\Project\Client\mvc\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Facultate\LicenseLMS\Project\Client\mvc\obj\Debug\net5.0\Razor\Views\Activities\Index.cshtml.g.cs
+D:\Facultate\LicenseLMS\Project\Client\mvc\bin\Debug\net5.0\System.Net.Http.Formatting.dll
+D:\Facultate\LicenseLMS\Project\Client\mvc\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+D:\Facultate\LicenseLMS\Project\Client\mvc\obj\Debug\net5.0\Razor\Views\Groups\Index.cshtml.g.cs

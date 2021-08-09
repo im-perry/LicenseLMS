@@ -44,36 +44,7 @@ namespace mvc.Controllers
             await HttpContext.SignOutAsync("oidc");
         }
 
-        [Authorize]
-        public async Task<IActionResult> Activities()
-        {
-            var data = new List<ActivityData>();
-
-            using (var client = new HttpClient())
-            {
-                var tokenResponse = await _tokenService.GetToken("activitiesapi.read");
-
-                client
-                    .SetBearerToken(tokenResponse.AccessToken);
-
-                var result = client
-                    .GetAsync("https://localhost:5445/activities")
-                    .Result;
-
-                if (result.IsSuccessStatusCode)
-                {
-                    var model = result.Content.ReadAsStringAsync().Result;
-
-                    data = JsonConvert.DeserializeObject<List<ActivityData>>(model);
-
-                    return View(data);
-                }
-                else
-                {
-                    throw new Exception("Unable to get content");
-                }
-            }
-        }
+        
 
         [Authorize]
         public async Task<IActionResult> Groups()

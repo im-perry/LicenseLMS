@@ -8,7 +8,7 @@ namespace activitiesapi.Repositories
 {
     public class ActivityRepository : IActivityRepository
     {
-        protected readonly ActivitiesContext _dbContext;
+        private readonly ActivitiesContext _dbContext;
 
         public ActivityRepository(ActivitiesContext dbContext)
         {
