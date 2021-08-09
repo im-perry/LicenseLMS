@@ -2074,6 +2074,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "ActivitiesAPI.Models": "1.0.0",
           "IdentityServer4.AccessTokenValidation": "3.0.1",
           "Microsoft.EntityFrameworkCore": "5.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.6",
@@ -2088,6 +2089,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "ActivitiesAPI.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/ActivitiesAPI.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ActivitiesAPI.Models.dll": {}
+        }
       },
       "groupsapi/1.0.0": {
         "type": "project",
@@ -7319,6 +7330,11 @@
       "type": "project",
       "path": "../activitiesapi/activitiesapi.csproj",
       "msbuildProject": "../activitiesapi/activitiesapi.csproj"
+    },
+    "ActivitiesAPI.Models/1.0.0": {
+      "type": "project",
+      "path": "../ActivitiesAPI.Models/ActivitiesAPI.Models.csproj",
+      "msbuildProject": "../ActivitiesAPI.Models/ActivitiesAPI.Models.csproj"
     },
     "groupsapi/1.0.0": {
       "type": "project",

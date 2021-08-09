@@ -1,4 +1,4 @@
-﻿using activitiesapi.Models;
+﻿using ActivitiesAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace activitiesapi

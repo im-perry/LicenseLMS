@@ -1,0 +1,17 @@
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Client\bin\Debug\net5.0\ActivitiesAPI.Models.dll
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Client\obj\Debug\net5.0\ActivitiesAPI.Client.csprojAssemblyReference.cache
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Client\obj\Debug\net5.0\ActivitiesAPI.Client.GeneratedMSBuildEditorConfig.editorconfig
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Client\obj\Debug\net5.0\ActivitiesAPI.Client.AssemblyInfoInputs.cache
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Client\obj\Debug\net5.0\ActivitiesAPI.Client.AssemblyInfo.cs
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Client\bin\Debug\net5.0\ActivitiesAPI.Client.deps.json
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Client\bin\Debug\net5.0\ActivitiesAPI.Client.dll
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Client\bin\Debug\net5.0\ref\ActivitiesAPI.Client.dll
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Client\bin\Debug\net5.0\ActivitiesAPI.Client.pdb
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Client\bin\Debug\net5.0\ActivitiesAPI.Models.pdb
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Client\obj\Debug\net5.0\ActivitiesAPI.Client.csproj.CoreCompileInputs.cache
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Client\obj\Debug\net5.0\ActivitiesAPI.Client.csproj.CopyComplete
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Client\obj\Debug\net5.0\ActivitiesAPI.Client.dll
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Client\obj\Debug\net5.0\ref\ActivitiesAPI.Client.dll
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Client\obj\Debug\net5.0\ActivitiesAPI.Client.pdb
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Client\bin\Debug\net5.0\TokensService.dll
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Client\bin\Debug\net5.0\TokensService.pdb

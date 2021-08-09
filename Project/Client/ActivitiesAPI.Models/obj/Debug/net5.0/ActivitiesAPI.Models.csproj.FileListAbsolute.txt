@@ -1,0 +1,12 @@
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Models\bin\Debug\net5.0\ActivitiesAPI.Models.deps.json
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Models\bin\Debug\net5.0\ActivitiesAPI.Models.dll
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Models\bin\Debug\net5.0\ref\ActivitiesAPI.Models.dll
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Models\bin\Debug\net5.0\ActivitiesAPI.Models.pdb
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Models\obj\Debug\net5.0\ActivitiesAPI.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Models\obj\Debug\net5.0\ActivitiesAPI.Models.AssemblyInfoInputs.cache
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Models\obj\Debug\net5.0\ActivitiesAPI.Models.AssemblyInfo.cs
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Models\obj\Debug\net5.0\ActivitiesAPI.Models.csproj.CoreCompileInputs.cache
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Models\obj\Debug\net5.0\ActivitiesAPI.Models.dll
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Models\obj\Debug\net5.0\ref\ActivitiesAPI.Models.dll
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Models\obj\Debug\net5.0\ActivitiesAPI.Models.pdb
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Models\obj\Debug\net5.0\ActivitiesAPI.Models.csprojAssemblyReference.cache

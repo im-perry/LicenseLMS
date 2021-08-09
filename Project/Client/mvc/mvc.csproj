@@ -5,6 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Home\Activities.cshtml" />
+    <Content Remove="Views\Home\Groups.cshtml" />
+    <Content Remove="Views\Home\RoomsManagement.cshtml" />
+    <Content Remove="Views\Home\Schedule.cshtml" />
+    <Content Remove="Views\Home\Teaching.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="IdentityModel" Version="5.1.0" />
     <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="5.0.6" />
@@ -19,11 +27,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\activitiesapi\activitiesapi.csproj" />
-    <ProjectReference Include="..\groupsapi\groupsapi.csproj" />
-    <ProjectReference Include="..\roomsmanagementapi\roomsmanagementapi.csproj" />
-    <ProjectReference Include="..\scheduleapi\scheduleapi.csproj" />
-    <ProjectReference Include="..\teachingapi\teachingapi.csproj" />
+    <ProjectReference Include="..\ActivitiesAPI.Client\ActivitiesAPI.Client.csproj" />
+    <ProjectReference Include="..\ActivitiesAPI.Models\ActivitiesAPI.Models.csproj" />
+    <ProjectReference Include="..\TokenService\TokensService.csproj" />
   </ItemGroup>
 
 </Project>

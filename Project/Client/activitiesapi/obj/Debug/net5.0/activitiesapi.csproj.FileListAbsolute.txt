@@ -167,3 +167,5 @@ D:\Facultate\LicenseLMS\Project\Client\activitiesapi\bin\Debug\net5.0\runtimes\w
 D:\Facultate\LicenseLMS\Project\Client\activitiesapi\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\Facultate\LicenseLMS\Project\Client\activitiesapi\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\Facultate\LicenseLMS\Project\Client\activitiesapi\obj\Debug\net5.0\activitiesapi.csprojAssemblyReference.cache
+D:\Facultate\LicenseLMS\Project\Client\activitiesapi\bin\Debug\net5.0\ActivitiesAPI.Models.dll
+D:\Facultate\LicenseLMS\Project\Client\activitiesapi\bin\Debug\net5.0\ActivitiesAPI.Models.pdb

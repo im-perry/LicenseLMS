@@ -1,15 +1,15 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
-using activitiesapi.Models;
-using Microsoft.AspNetCore.Authorization;
 using System.Transactions;
 using activitiesapi.Repositories;
+using ActivitiesAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace activitiesapi.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-   // [Authorize]
+    [Authorize]
     public class ActivitiesController : ControllerBase
     {
         private readonly IActivityRepository _activityRepository;

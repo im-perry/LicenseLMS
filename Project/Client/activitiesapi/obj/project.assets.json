@@ -2069,6 +2069,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "ActivitiesAPI.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/ActivitiesAPI.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ActivitiesAPI.Models.dll": {}
+        }
       }
     }
   },
@@ -7257,10 +7267,16 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "ActivitiesAPI.Models/1.0.0": {
+      "type": "project",
+      "path": "../ActivitiesAPI.Models/ActivitiesAPI.Models.csproj",
+      "msbuildProject": "../ActivitiesAPI.Models/ActivitiesAPI.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "ActivitiesAPI.Models >= 1.0.0",
       "IdentityServer4.AccessTokenValidation >= 3.0.1",
       "Microsoft.EntityFrameworkCore >= 5.0.6",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.6",
@@ -7294,7 +7310,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Facultate\\LicenseLMS\\Project\\Client\\ActivitiesAPI.Models\\ActivitiesAPI.Models.csproj": {
+              "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\ActivitiesAPI.Models\\ActivitiesAPI.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

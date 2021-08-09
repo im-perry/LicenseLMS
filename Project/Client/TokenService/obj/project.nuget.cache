@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "CdFMLFYBoy+z2kciCravVOO4qtm6zbky+ucqUOIPO5jQu4Er13/O6mf8W5ke9DUc9vZNvrOD+/HpqcO64xRnSg==",
+  "success": true,
+  "projectFilePath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\TokenService\\TokensService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\peris\\.nuget\\packages\\identitymodel\\5.1.0\\identitymodel.5.1.0.nupkg.sha512",
+    "C:\\Users\\peris\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\peris\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\peris\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "C:\\Users\\peris\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\peris\\.nuget\\packages\\system.text.encodings.web\\5.0.1\\system.text.encodings.web.5.0.1.nupkg.sha512",
+    "C:\\Users\\peris\\.nuget\\packages\\system.text.json\\5.0.1\\system.text.json.5.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
