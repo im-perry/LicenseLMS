@@ -169,3 +169,15 @@ D:\Facultate\LicenseLMS\Project\Client\activitiesapi\bin\Debug\net5.0\runtimes\w
 D:\Facultate\LicenseLMS\Project\Client\activitiesapi\obj\Debug\net5.0\activitiesapi.csprojAssemblyReference.cache
 D:\Facultate\LicenseLMS\Project\Client\activitiesapi\bin\Debug\net5.0\ActivitiesAPI.Models.dll
 D:\Facultate\LicenseLMS\Project\Client\activitiesapi\bin\Debug\net5.0\ActivitiesAPI.Models.pdb
+D:\Facultate\LicenseLMS\Project\Client\activitiesapi\bin\Debug\net5.0\activitiesapi.StaticWebAssets.xml
+D:\Facultate\LicenseLMS\Project\Client\activitiesapi\bin\Debug\net5.0\Microsoft.AspNetCore.Authorization.dll
+D:\Facultate\LicenseLMS\Project\Client\activitiesapi\bin\Debug\net5.0\Microsoft.AspNetCore.Components.dll
+D:\Facultate\LicenseLMS\Project\Client\activitiesapi\bin\Debug\net5.0\Microsoft.AspNetCore.Components.Authorization.dll
+D:\Facultate\LicenseLMS\Project\Client\activitiesapi\bin\Debug\net5.0\Microsoft.AspNetCore.Components.Forms.dll
+D:\Facultate\LicenseLMS\Project\Client\activitiesapi\bin\Debug\net5.0\Microsoft.AspNetCore.Components.Web.dll
+D:\Facultate\LicenseLMS\Project\Client\activitiesapi\bin\Debug\net5.0\Microsoft.AspNetCore.Components.WebAssembly.dll
+D:\Facultate\LicenseLMS\Project\Client\activitiesapi\bin\Debug\net5.0\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll
+D:\Facultate\LicenseLMS\Project\Client\activitiesapi\bin\Debug\net5.0\Microsoft.AspNetCore.Metadata.dll
+D:\Facultate\LicenseLMS\Project\Client\activitiesapi\bin\Debug\net5.0\Microsoft.JSInterop.dll
+D:\Facultate\LicenseLMS\Project\Client\activitiesapi\bin\Debug\net5.0\Microsoft.JSInterop.WebAssembly.dll
+D:\Facultate\LicenseLMS\Project\Client\activitiesapi\bin\Debug\net5.0\System.IO.Pipelines.dll

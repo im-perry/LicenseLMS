@@ -1,5 +1,5 @@
-﻿using activitiesapi.Models;
-using groupsapi.Models;
+﻿using ActivitiesAPI.Models;
+using GroupsAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

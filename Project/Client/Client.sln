@@ -15,13 +15,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "teachingapi", "teachingapi\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "roomsmanagementapi", "roomsmanagementapi\roomsmanagementapi.csproj", "{FA4E4365-4290-4784-A706-ABC18D83002A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActivitiesAPI.Client", "ActivitiesAPI.Client\ActivitiesAPI.Client.csproj", "{2A69BEFB-E84D-4D98-8825-E26EB10FE7D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActivitiesAPI.Client", "ActivitiesAPI.Client\ActivitiesAPI.Client.csproj", "{2A69BEFB-E84D-4D98-8825-E26EB10FE7D9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ActivitiesService", "ActivitiesService", "{72D514C9-8586-4F23-858F-F6044146D5D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActivitiesAPI.Models", "ActivitiesAPI.Models\ActivitiesAPI.Models.csproj", "{D58F2682-2B92-4D5C-A049-5C29303C5831}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActivitiesAPI.Models", "ActivitiesAPI.Models\ActivitiesAPI.Models.csproj", "{D58F2682-2B92-4D5C-A049-5C29303C5831}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokensService", "TokenService\TokensService.csproj", "{707A4563-87C4-42CC-94BA-A4DE584662F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TokensService", "TokenService\TokensService.csproj", "{707A4563-87C4-42CC-94BA-A4DE584662F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GroupsServcie", "GroupsServcie", "{A33A6D18-E478-4602-97F7-3B5A9005FE44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupsAPI.Client", "GroupsApi.Client\GroupsAPI.Client.csproj", "{6F4D2000-3E67-4DE1-B8B0-770F38DE34C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupsAPI.Models", "GroupsApi.Models\GroupsAPI.Models.csproj", "{F393ACBB-49CC-46CF-BB7A-3999DBB2A9E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,14 +71,25 @@ Global
 		{707A4563-87C4-42CC-94BA-A4DE584662F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{707A4563-87C4-42CC-94BA-A4DE584662F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{707A4563-87C4-42CC-94BA-A4DE584662F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F4D2000-3E67-4DE1-B8B0-770F38DE34C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F4D2000-3E67-4DE1-B8B0-770F38DE34C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F4D2000-3E67-4DE1-B8B0-770F38DE34C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F4D2000-3E67-4DE1-B8B0-770F38DE34C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F393ACBB-49CC-46CF-BB7A-3999DBB2A9E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F393ACBB-49CC-46CF-BB7A-3999DBB2A9E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F393ACBB-49CC-46CF-BB7A-3999DBB2A9E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F393ACBB-49CC-46CF-BB7A-3999DBB2A9E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1819D904-A4BC-4CF9-BFA7-185E5E5EA4E0} = {72D514C9-8586-4F23-858F-F6044146D5D5}
+		{BD2E91CC-6C72-4563-AC0A-01789A6956DD} = {A33A6D18-E478-4602-97F7-3B5A9005FE44}
 		{2A69BEFB-E84D-4D98-8825-E26EB10FE7D9} = {72D514C9-8586-4F23-858F-F6044146D5D5}
 		{D58F2682-2B92-4D5C-A049-5C29303C5831} = {72D514C9-8586-4F23-858F-F6044146D5D5}
+		{6F4D2000-3E67-4DE1-B8B0-770F38DE34C0} = {A33A6D18-E478-4602-97F7-3B5A9005FE44}
+		{F393ACBB-49CC-46CF-BB7A-3999DBB2A9E7} = {A33A6D18-E478-4602-97F7-3B5A9005FE44}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D147320A-DD1E-4F63-989D-66C8DBBBD91B}

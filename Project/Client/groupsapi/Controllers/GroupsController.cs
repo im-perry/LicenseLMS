@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using groupsapi;
-using groupsapi.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using groupsapi.Repositories;
 using System.Transactions;
+using GroupsAPI.Models;
+using System;
 
 namespace groupsapi.Controllers
 {
@@ -25,7 +19,7 @@ namespace groupsapi.Controllers
             _groupRepository = groupRepository;
         }
 
-        // GET: api/Groups
+        // GET: Groups
         [HttpGet]
         public IActionResult GetGroups()
         {
@@ -33,17 +27,17 @@ namespace groupsapi.Controllers
             return new OkObjectResult(groups);
         }
 
-        // GET: api/Groups/5
+        // GET: Groups/5
         [HttpGet("{id}")]
-        public IActionResult GetGroup(int id)
+        public IActionResult GetGroup([FromRoute] Guid id)
         {
             var group = _groupRepository.GetGroupById(id);
             return new OkObjectResult(group);
         }
 
-        // PUT: api/Groups/5
-        [HttpPut]
-        public IActionResult PutGroup(Group group)
+        // PUT: Groups
+        [HttpPut("{group}")]
+        public IActionResult PutGroup([FromBody] Group group)
         {
             if (group != null)
             {
@@ -58,9 +52,9 @@ namespace groupsapi.Controllers
             return new NoContentResult();
         }
 
-        // POST: api/Groups
+        // POST: Groups
         [HttpPost]
-        public IActionResult PostGroup(Group group)
+        public IActionResult PostGroup([FromBody] Group group)
         {
             using (var scope = new TransactionScope())
             {
@@ -70,9 +64,9 @@ namespace groupsapi.Controllers
             }
         }
 
-        // DELETE: api/Groups/5
+        // DELETE: Groups/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteGroup(int id)
+        public IActionResult DeleteGroup([FromRoute] Guid id)
         {
             _groupRepository.Delete(id);
             return new OkResult();

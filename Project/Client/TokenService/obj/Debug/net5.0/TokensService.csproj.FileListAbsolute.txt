@@ -2,7 +2,6 @@ D:\Facultate\LicenseLMS\Project\Client\TokenService\bin\Debug\net5.0\TokensServi
 D:\Facultate\LicenseLMS\Project\Client\TokenService\bin\Debug\net5.0\TokensService.dll
 D:\Facultate\LicenseLMS\Project\Client\TokenService\bin\Debug\net5.0\ref\TokensService.dll
 D:\Facultate\LicenseLMS\Project\Client\TokenService\bin\Debug\net5.0\TokensService.pdb
-D:\Facultate\LicenseLMS\Project\Client\TokenService\obj\Debug\net5.0\TokensService.csprojAssemblyReference.cache
 D:\Facultate\LicenseLMS\Project\Client\TokenService\obj\Debug\net5.0\TokensService.GeneratedMSBuildEditorConfig.editorconfig
 D:\Facultate\LicenseLMS\Project\Client\TokenService\obj\Debug\net5.0\TokensService.AssemblyInfoInputs.cache
 D:\Facultate\LicenseLMS\Project\Client\TokenService\obj\Debug\net5.0\TokensService.AssemblyInfo.cs
@@ -10,3 +9,4 @@ D:\Facultate\LicenseLMS\Project\Client\TokenService\obj\Debug\net5.0\TokensServi
 D:\Facultate\LicenseLMS\Project\Client\TokenService\obj\Debug\net5.0\TokensService.dll
 D:\Facultate\LicenseLMS\Project\Client\TokenService\obj\Debug\net5.0\ref\TokensService.dll
 D:\Facultate\LicenseLMS\Project\Client\TokenService\obj\Debug\net5.0\TokensService.pdb
+D:\Facultate\LicenseLMS\Project\Client\TokenService\obj\Debug\net5.0\TokensService.csprojAssemblyReference.cache

@@ -1,5 +1,6 @@
-﻿using groupsapi.Models;
+﻿using GroupsAPI.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -14,7 +15,7 @@ namespace groupsapi.Repositories
             _dbContext = dbContext;
         }
 
-        public Group GetGroupById(int groupId)
+        public Group GetGroupById(Guid groupId)
         {
             return _dbContext.Groups.Find(groupId);
         }
@@ -30,7 +31,7 @@ namespace groupsapi.Repositories
             Save();
         }
 
-        public void Delete(int groupId)
+        public void Delete(Guid groupId)
         {
             var group = _dbContext.Groups.Find(groupId);
             _dbContext.Groups.Remove(group);

@@ -1,10 +1,7 @@
-﻿using activitiesapi.Models;
-using groupsapi.Models;
-using System;
+﻿using ActivitiesAPI.Models;
+using GroupsAPI.Models;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace teachingapi.Models
 {

@@ -29,15 +29,15 @@ namespace activitiesapi.Controllers
 
         // GET: Activities/5
         [HttpGet("{id}")]
-        public IActionResult GetActivity(Guid id)
+        public IActionResult GetActivity([FromRoute] Guid id)
         {
             var activity = _activityRepository.GetActivityById(id);
             return new OkObjectResult(activity);
         }
 
         // PUT: Activities
-        [HttpPut]
-        public IActionResult PutActivity(Activity activity)
+        [HttpPut("{activity}")]
+        public IActionResult PutActivity([FromBody] Activity activity)
         {
             if (activity != null)
             {
@@ -54,7 +54,7 @@ namespace activitiesapi.Controllers
 
         // POST: Activities
         [HttpPost]
-        public IActionResult PostActivity(Activity activity)
+        public IActionResult PostActivity([FromBody] Activity activity)
         {
             using (var scope = new TransactionScope())
             {
@@ -66,7 +66,7 @@ namespace activitiesapi.Controllers
 
         // DELETE: Activities/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteActivity(Guid id)
+        public IActionResult DeleteActivity([FromRoute] Guid id)
         {
             _activityRepository.Delete(id);
             return new OkResult();

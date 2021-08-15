@@ -1,0 +1,69 @@
+﻿@model GroupsAPI.Models.Group
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Easy Learning</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body style="overflow-x: hidden;" class = "">
+    <div class="container-main">
+        <h1>Create</h1>
+        <h4>Group</h4>
+        <div class="bg-light">
+            <div style="margin: 20px;">
+                <hr />
+                <div class="row">
+                    <div class="col-md-4">
+                        <form asp-action="Create">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="Name" class="control-label"></label>
+                                <input asp-for="Name" class="form-control" required />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Year" class="control-label"></label>
+                                <input asp-for="Year" class="form-control" required />
+                                <span asp-validation-for="Year" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="TutorId" class="control-label"></label>
+                                <input asp-for="TutorId" class="form-control" required />
+                                <span asp-validation-for="TutorId" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="SpecialisationId" class="control-label"></label>
+                                <input asp-for="SpecialisationId" class="form-control" required />
+                                <span asp-validation-for="SpecialisationId" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Subgroups" class="control-label"></label>
+                                <input asp-for="Subgroups" class="form-control" />
+                                <span asp-validation-for="Subgroups" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Create" class="btn btn-primary" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <a asp-action="Index">Back to List</a>
+        </div>
+        <div style="position: absolute; bottom: 65px; z-index: -1;">
+            <img src="~/img/account/account_translucent_advanced.png" width="1110">
+        </div>
+    </div>
+</body>
+</html>

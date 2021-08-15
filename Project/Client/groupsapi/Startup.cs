@@ -41,6 +41,10 @@ namespace groupsapi
             });
 
             services.AddControllers();
+            services.AddControllersWithViews();
+            services.AddRazorPages();
+            services.AddHttpContextAccessor();
+
             services.AddTransient<IGroupRepository, GroupRepository>();
             services.AddTransient<ISubgroupRepository, SubgroupRepository>();
             services.AddTransient<ISpecialisationRepository, SpecialisationRepository>();

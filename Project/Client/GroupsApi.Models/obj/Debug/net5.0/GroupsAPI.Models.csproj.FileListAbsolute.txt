@@ -1,0 +1,12 @@
+D:\Facultate\LicenseLMS\Project\Client\GroupsApi.Models\bin\Debug\net5.0\GroupsAPI.Models.deps.json
+D:\Facultate\LicenseLMS\Project\Client\GroupsApi.Models\bin\Debug\net5.0\GroupsAPI.Models.dll
+D:\Facultate\LicenseLMS\Project\Client\GroupsApi.Models\bin\Debug\net5.0\ref\GroupsAPI.Models.dll
+D:\Facultate\LicenseLMS\Project\Client\GroupsApi.Models\bin\Debug\net5.0\GroupsAPI.Models.pdb
+D:\Facultate\LicenseLMS\Project\Client\GroupsApi.Models\obj\Debug\net5.0\GroupsAPI.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Facultate\LicenseLMS\Project\Client\GroupsApi.Models\obj\Debug\net5.0\GroupsAPI.Models.AssemblyInfoInputs.cache
+D:\Facultate\LicenseLMS\Project\Client\GroupsApi.Models\obj\Debug\net5.0\GroupsAPI.Models.AssemblyInfo.cs
+D:\Facultate\LicenseLMS\Project\Client\GroupsApi.Models\obj\Debug\net5.0\GroupsAPI.Models.csproj.CoreCompileInputs.cache
+D:\Facultate\LicenseLMS\Project\Client\GroupsApi.Models\obj\Debug\net5.0\GroupsAPI.Models.dll
+D:\Facultate\LicenseLMS\Project\Client\GroupsApi.Models\obj\Debug\net5.0\ref\GroupsAPI.Models.dll
+D:\Facultate\LicenseLMS\Project\Client\GroupsApi.Models\obj\Debug\net5.0\GroupsAPI.Models.pdb
+D:\Facultate\LicenseLMS\Project\Client\GroupsApi.Models\obj\Debug\net5.0\GroupsAPI.Models.csprojAssemblyReference.cache

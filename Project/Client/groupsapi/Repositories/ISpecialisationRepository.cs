@@ -1,8 +1,5 @@
-﻿using groupsapi.Models;
-using System;
+﻿using GroupsAPI.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace groupsapi.Repositories
 {

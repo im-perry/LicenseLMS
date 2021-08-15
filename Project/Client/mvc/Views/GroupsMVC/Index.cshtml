@@ -1,0 +1,61 @@
+﻿@model IEnumerable<GroupsAPI.Models.Group>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Groups</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table bg-light">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TutorId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpecialisationId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subgroups)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Year)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TutorId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SpecialisationId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Subgroups)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id=item.GroupId }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.GroupId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.GroupId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

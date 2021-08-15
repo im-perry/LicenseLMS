@@ -1,3 +1,5 @@
+using ActivitiesAPI.Client;
+using GroupsAPI.Client;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -42,8 +44,19 @@ namespace mvc
 
                 });
 
+            services.AddScoped<ActivitiesAPIClient>();
+            services.AddScoped<GroupsAPIClient>();
+            services.AddScoped<SubgroupsAPIClient>();
+            services.AddScoped<SpecializationsAPIClient>();
+
+            services.AddHttpClient<ActivitiesAPIClient>();
+            services.AddHttpClient<GroupsAPIClient>();
+            services.AddHttpClient<SubgroupsAPIClient>();
+            services.AddHttpClient<SpecializationsAPIClient>();
+
             services.Configure<IdentityServerSettings>(Configuration.GetSection("IdentityServerSettings"));
             services.AddSingleton<ITokenService, TokenService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
