@@ -1,4 +1,4 @@
-﻿@model ActivitiesAPI.Models.Activity
+﻿@model GroupsAPI.Models.Subgroup
 
 @{
     ViewData["Title"] = "Create";
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body style="background-color: #CCDDF6; overflow-x: hidden;">
+<body style="overflow-x: hidden;">
     <div class="container-main">
         <h1>Create</h1>
         <h4>Activity</h4>
@@ -31,31 +31,9 @@
                                 <span asp-validation-for="Name" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <label asp-for="Duration" class="control-label"></label>
-                                <input asp-for="Duration" class="form-control" required />
-                                <span asp-validation-for="Duration" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="Year" class="control-label"></label>
-                                <input asp-for="Year" class="form-control" required />
-                                <span asp-validation-for="Year" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="Level" class="control-label"></label>
-                                <select asp-for="Level" class="form-control" required>
-                                    <option>License</option>
-                                    <option>Master</option>
-                                </select>
-                                <span asp-validation-for="Level" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="Type" class="control-label"></label>
-                                <select asp-for="Type" class="form-control" required>
-                                    <option>Course</option>
-                                    <option>Seminary</option>
-                                    <option>Labour</option>
-                                </select>
-                                <span asp-validation-for="Type" class="text-danger"></span>
+                                <label asp-for="GroupId" class="control-label"></label>
+                                <input asp-for="GroupId" class="form-control" />
+                                <span asp-validation-for="GroupId" class="text-danger"></span>
                             </div>
                             <div class="form-group">
                                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -67,9 +45,6 @@
         </div>
         <div>
             <a asp-action="Index">Back to List</a>
-        </div>
-        <div style="position: absolute; bottom: 65px; z-index: -1;">
-            <img src="~/img/account/account_translucent_advanced.png" width="1110">
         </div>
     </div>
 </body>

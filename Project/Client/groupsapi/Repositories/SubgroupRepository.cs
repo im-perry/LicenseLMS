@@ -1,5 +1,6 @@
 ﻿using GroupsAPI.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -14,7 +15,7 @@ namespace groupsapi.Repositories
             _dbContext = dbContext;
         }
 
-        public Subgroup GetSubgroupById(int activityId)
+        public Subgroup GetSubgroupById(Guid activityId)
         {
             return _dbContext.Subgroups.Find(activityId);
         }
@@ -30,7 +31,7 @@ namespace groupsapi.Repositories
             Save();
         }
 
-        public void Delete(int subgroupId)
+        public void Delete(Guid subgroupId)
         {
             var subgroup = _dbContext.Subgroups.Find(subgroupId);
             _dbContext.Subgroups.Remove(subgroup);

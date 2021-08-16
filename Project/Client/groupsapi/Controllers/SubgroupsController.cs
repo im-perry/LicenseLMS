@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using groupsapi.Repositories;
 using System.Transactions;
 using GroupsAPI.Models;
+using System;
 
 namespace groupsapi.Controllers
 {
@@ -18,7 +19,7 @@ namespace groupsapi.Controllers
             _subgroupRepository = subgroupRepository;
         }
 
-        // GET: api/Subgroups
+        // GET: Subgroups
         [HttpGet]
         public IActionResult GetSubgroups()
         {
@@ -26,17 +27,17 @@ namespace groupsapi.Controllers
             return new OkObjectResult(subgroups);
         }
 
-        // GET: api/Subgroups/5
+        // GET: Subgroups/5
         [HttpGet("{id}")]
-        public IActionResult GetSubgroup(int id)
+        public IActionResult GetSubgroup([FromRoute] Guid id)
         {
             var subgroups = _subgroupRepository.GetSubgroupById(id);
             return new OkObjectResult(subgroups);
         }
 
-        // PUT: api/Subgroups/5
-        [HttpPut]
-        public IActionResult PutSubgroup( Subgroup subgroup)
+        // PUT: Subgroups
+        [HttpPut("{subgroup}")]
+        public IActionResult PutSubgroup([FromBody] Subgroup subgroup)
         {
             if (subgroup != null)
             {
@@ -51,9 +52,9 @@ namespace groupsapi.Controllers
             return new NoContentResult();
         }
 
-        // POST: api/Subgroups
+        // POST: Subgroups
         [HttpPost]
-        public IActionResult PostSubgroup(Subgroup subgroup)
+        public IActionResult PostSubgroup([FromBody] Subgroup subgroup)
         {
             using (var scope = new TransactionScope())
             {
@@ -63,9 +64,9 @@ namespace groupsapi.Controllers
             }
         }
 
-        // DELETE: api/Subgroups/5
+        // DELETE: Subgroups/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteSubgroup(int id)
+        public IActionResult DeleteSubgroup([FromRoute] Guid id)
         {
             _subgroupRepository.Delete(id);
             return new OkResult();

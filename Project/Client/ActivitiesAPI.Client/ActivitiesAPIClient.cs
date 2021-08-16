@@ -136,7 +136,7 @@ namespace ActivitiesAPI.Client
 
         public async Task<Activity> UpdateActivity(Activity activity)
         {
-            var tokenResponse = await _tokenService.GetToken("activitiesapi.write");
+            var tokenResponse = await _tokenService.GetToken("activitiesapi.read");
 
             _httpClient
                 .SetBearerToken(tokenResponse.AccessToken);

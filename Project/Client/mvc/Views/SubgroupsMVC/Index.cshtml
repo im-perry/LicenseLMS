@@ -1,11 +1,11 @@
-﻿@model IEnumerable<ActivitiesAPI.Models.Activity>
+﻿@model IEnumerable<GroupsAPI.Models.Subgroup>
 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Activities</h1>
+<h1>Subgroups</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -17,16 +17,7 @@
                 @Html.DisplayNameFor(model => model.Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Duration)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Year)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Level)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Type)
+                @Html.DisplayNameFor(model => model.GroupId)
             </th>
             <th></th>
         </tr>
@@ -38,21 +29,12 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Duration)
+                @Html.DisplayFor(modelItem => item.GroupId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Year)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Level)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Type)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new {  id=item.ActivityId  }) |
-                @Html.ActionLink("Details", "Details", new {  id=item.ActivityId }) |
-                @Html.ActionLink("Delete", "Delete", new {  id=item.ActivityId })
+                @Html.ActionLink("Edit", "Edit", new {  id=item.SubgroupId }) |
+                @Html.ActionLink("Details", "Details", new {  id=item.SubgroupId }) |
+                @Html.ActionLink("Delete", "Delete", new {  id=item.SubgroupId })
             </td>
         </tr>
 }

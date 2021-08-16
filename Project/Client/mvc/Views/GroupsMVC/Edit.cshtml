@@ -27,17 +27,17 @@
                             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                             <div class="form-group">
                                 <label asp-for="Name" class="control-label"></label>
-                                <input asp-for="Name" class="form-control" required />
+                                <input asp-for="Name" class="form-control" />
                                 <span asp-validation-for="Name" class="text-danger"></span>
                             </div>
                             <div class="form-group">
                                 <label asp-for="Year" class="control-label"></label>
-                                <input asp-for="Year" class="form-control" required />
+                                <input asp-for="Year" class="form-control" />
                                 <span asp-validation-for="Year" class="text-danger"></span>
                             </div>
                             <div class="form-group">
                                 <label asp-for="TutorId" class="control-label"></label>
-                                <input asp-for="TutorId" class="form-control" required />
+                                <input asp-for="TutorId" class="form-control" />
                                 <span asp-validation-for="TutorId" class="text-danger"></span>
                             </div>
                             <div class="form-group">
@@ -60,9 +60,6 @@
         </div>
         <div>
             <a asp-action="Index">Back to List</a>
-        </div>
-        <div style="position: absolute; bottom: 65px; z-index: -1;">
-            <img src="~/img/transaction/transaction_translucent_advanced.png" width="1110">
         </div>
     </div>
 </body>

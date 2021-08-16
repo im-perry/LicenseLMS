@@ -136,7 +136,7 @@ namespace GroupsAPI.Client
 
         public async Task<Group> UpdateGroup(Group group)
         {
-            var tokenResponse = await _tokenService.GetToken("groupsapi.write");
+            var tokenResponse = await _tokenService.GetToken("groupsapi.read");
 
             _httpClient
                 .SetBearerToken(tokenResponse.AccessToken);
