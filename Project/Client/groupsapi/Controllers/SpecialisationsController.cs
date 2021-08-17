@@ -3,10 +3,11 @@ using groupsapi.Repositories;
 using System.Transactions;
 using Microsoft.AspNetCore.Authorization;
 using GroupsAPI.Models;
+using System;
 
 namespace groupsapi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     [Authorize]
     public class SpecialisationsController : ControllerBase
@@ -18,7 +19,7 @@ namespace groupsapi.Controllers
             _specialisationRepository = specialisationRepository;
         }
 
-        // GET: api/Specialisations
+        // GET: Specialisations
         [HttpGet]
         public IActionResult GetSpecialisations()
         {
@@ -26,17 +27,17 @@ namespace groupsapi.Controllers
             return new OkObjectResult(specialisations);
         }
 
-        // GET: api/Specialisations/5
+        // GET: Specialisations/5
         [HttpGet("{id}")]
-        public IActionResult GetSpecialisation(int id)
+        public IActionResult GetSpecialisation([FromRoute] Guid id)
         {
             var specialisation = _specialisationRepository.GetSpecialisationById(id);
             return new OkObjectResult(specialisation);
         }
 
-        // PUT: api/Specialisations/5
-        [HttpPut]
-        public IActionResult PutSpecialisation(Specialisation specialisation)
+        // PUT: Specialisations/5
+        [HttpPut("{specialisation}")]
+        public IActionResult PutSpecialisation([FromBody] Specialisation specialisation)
         {
             if (specialisation != null)
             {
@@ -51,9 +52,9 @@ namespace groupsapi.Controllers
             return new NoContentResult();
         }
 
-        // POST: api/Specialisations
+        // POST: Specialisations
         [HttpPost]
-        public IActionResult PostSpecialisation(Specialisation specialisation)
+        public IActionResult PostSpecialisation([FromBody] Specialisation specialisation)
         {
             using (var scope = new TransactionScope())
             {
@@ -63,9 +64,9 @@ namespace groupsapi.Controllers
             }
         }
 
-        // DELETE: api/Specialisations/5
+        // DELETE: Specialisations/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteSpecialisation(int id)
+        public IActionResult DeleteSpecialisation([FromRoute] Guid id)
         {
             _specialisationRepository.Delete(id);
             return new OkResult();
