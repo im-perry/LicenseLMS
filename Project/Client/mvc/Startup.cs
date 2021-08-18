@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using RoomsAPI.Client;
 using TokensService;
 
 namespace mvc
@@ -48,11 +49,13 @@ namespace mvc
             services.AddScoped<GroupsAPIClient>();
             services.AddScoped<SubgroupsAPIClient>();
             services.AddScoped<SpecializationsAPIClient>();
+            services.AddScoped<RoomsAPIClient>();
 
             services.AddHttpClient<ActivitiesAPIClient>();
             services.AddHttpClient<GroupsAPIClient>();
             services.AddHttpClient<SubgroupsAPIClient>();
             services.AddHttpClient<SpecializationsAPIClient>();
+            services.AddHttpClient<RoomsAPIClient>();
 
             services.Configure<IdentityServerSettings>(Configuration.GetSection("IdentityServerSettings"));
             services.AddSingleton<ITokenService, TokenService>();

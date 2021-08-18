@@ -2374,6 +2374,16 @@
           "bin/placeholder/GroupsAPI.Models.dll": {}
         }
       },
+      "RoomsAPI.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/RoomsAPI.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RoomsAPI.Models.dll": {}
+        }
+      },
       "roomsmanagementapi/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -2381,7 +2391,8 @@
           "IdentityServer4.AccessTokenValidation": "3.0.1",
           "Microsoft.EntityFrameworkCore": "5.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.6",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
+          "RoomsAPI.Models": "1.0.0"
         },
         "compile": {
           "bin/placeholder/roomsmanagementapi.dll": {}
@@ -7949,6 +7960,11 @@
       "type": "project",
       "path": "../GroupsApi.Models/GroupsAPI.Models.csproj",
       "msbuildProject": "../GroupsApi.Models/GroupsAPI.Models.csproj"
+    },
+    "RoomsAPI.Models/1.0.0": {
+      "type": "project",
+      "path": "../RoomsAPI.Models/RoomsAPI.Models.csproj",
+      "msbuildProject": "../RoomsAPI.Models/RoomsAPI.Models.csproj"
     },
     "roomsmanagementapi/1.0.0": {
       "type": "project",

@@ -1,8 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using roomsmanagementapi.Models;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using RoomsAPI.Models;
 
 namespace roomsmanagementapi
 {

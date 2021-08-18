@@ -45,6 +45,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.6",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
           "Newtonsoft.Json": "13.0.1",
+          "RoomsAPI.Client": "1.0.0",
+          "RoomsAPI.Models": "1.0.0",
           "TokensService": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
@@ -2594,6 +2596,44 @@
         },
         "compile": {
           "GroupsAPI.Models.dll": {}
+        }
+      },
+      "RoomsAPI.Client/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNet.WebApi.Client": "5.2.7",
+          "RoomsAPI.Models": "1.0.0",
+          "System.Net.Http": "4.3.4",
+          "TokensService": "1.0.0",
+          "roomsmanagementapi": "1.0.0"
+        },
+        "runtime": {
+          "RoomsAPI.Client.dll": {}
+        },
+        "compile": {
+          "RoomsAPI.Client.dll": {}
+        }
+      },
+      "RoomsAPI.Models/1.0.0": {
+        "runtime": {
+          "RoomsAPI.Models.dll": {}
+        },
+        "compile": {
+          "RoomsAPI.Models.dll": {}
+        }
+      },
+      "roomsmanagementapi/1.0.0": {
+        "dependencies": {
+          "IdentityServer4.AccessTokenValidation": "3.0.1",
+          "Microsoft.EntityFrameworkCore": "5.0.6",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.6",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
+          "RoomsAPI.Models": "1.0.0"
+        },
+        "runtime": {
+          "roomsmanagementapi.dll": {}
+        },
+        "compile": {
+          "roomsmanagementapi.dll": {}
         }
       },
       "TokensService/1.0.0": {
@@ -5561,6 +5601,21 @@
       "sha512": ""
     },
     "GroupsAPI.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RoomsAPI.Client/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RoomsAPI.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "roomsmanagementapi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

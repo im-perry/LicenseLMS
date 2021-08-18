@@ -1,0 +1,12 @@
+D:\Facultate\LicenseLMS\Project\Client\RoomsAPI.Models\bin\Debug\net5.0\RoomsAPI.Models.deps.json
+D:\Facultate\LicenseLMS\Project\Client\RoomsAPI.Models\bin\Debug\net5.0\RoomsAPI.Models.dll
+D:\Facultate\LicenseLMS\Project\Client\RoomsAPI.Models\bin\Debug\net5.0\ref\RoomsAPI.Models.dll
+D:\Facultate\LicenseLMS\Project\Client\RoomsAPI.Models\bin\Debug\net5.0\RoomsAPI.Models.pdb
+D:\Facultate\LicenseLMS\Project\Client\RoomsAPI.Models\obj\Debug\net5.0\RoomsAPI.Models.csprojAssemblyReference.cache
+D:\Facultate\LicenseLMS\Project\Client\RoomsAPI.Models\obj\Debug\net5.0\RoomsAPI.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Facultate\LicenseLMS\Project\Client\RoomsAPI.Models\obj\Debug\net5.0\RoomsAPI.Models.AssemblyInfoInputs.cache
+D:\Facultate\LicenseLMS\Project\Client\RoomsAPI.Models\obj\Debug\net5.0\RoomsAPI.Models.AssemblyInfo.cs
+D:\Facultate\LicenseLMS\Project\Client\RoomsAPI.Models\obj\Debug\net5.0\RoomsAPI.Models.csproj.CoreCompileInputs.cache
+D:\Facultate\LicenseLMS\Project\Client\RoomsAPI.Models\obj\Debug\net5.0\RoomsAPI.Models.dll
+D:\Facultate\LicenseLMS\Project\Client\RoomsAPI.Models\obj\Debug\net5.0\ref\RoomsAPI.Models.dll
+D:\Facultate\LicenseLMS\Project\Client\RoomsAPI.Models\obj\Debug\net5.0\RoomsAPI.Models.pdb

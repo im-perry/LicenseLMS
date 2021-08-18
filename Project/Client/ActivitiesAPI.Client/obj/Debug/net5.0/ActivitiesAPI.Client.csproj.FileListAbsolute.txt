@@ -23,3 +23,4 @@ D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Client\bin\Debug\net5.0\app
 D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Client\bin\Debug\net5.0\activitiesapi.exe
 D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Client\bin\Debug\net5.0\activitiesapi.dll
 D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Client\bin\Debug\net5.0\activitiesapi.pdb
+D:\Facultate\LicenseLMS\Project\Client\ActivitiesAPI.Client\bin\Debug\net5.0\activitiesapi.StaticWebAssets.xml

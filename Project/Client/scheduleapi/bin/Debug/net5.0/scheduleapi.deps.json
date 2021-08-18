@@ -2115,12 +2115,21 @@
           "GroupsAPI.Models.dll": {}
         }
       },
+      "RoomsAPI.Models/1.0.0": {
+        "runtime": {
+          "RoomsAPI.Models.dll": {}
+        },
+        "compile": {
+          "RoomsAPI.Models.dll": {}
+        }
+      },
       "roomsmanagementapi/1.0.0": {
         "dependencies": {
           "IdentityServer4.AccessTokenValidation": "3.0.1",
           "Microsoft.EntityFrameworkCore": "5.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.6",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
+          "RoomsAPI.Models": "1.0.0"
         },
         "runtime": {
           "roomsmanagementapi.dll": {}
@@ -4820,6 +4829,11 @@
       "sha512": ""
     },
     "GroupsAPI.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RoomsAPI.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

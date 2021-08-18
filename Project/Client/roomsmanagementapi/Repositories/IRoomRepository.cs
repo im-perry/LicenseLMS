@@ -1,11 +1,16 @@
-﻿using System;
+﻿using RoomsAPI.Models;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace roomsmanagementapi.Repositories
 {
-    interface IRoomRepository
+    public interface IRoomRepository
     {
+        Room GetRoomById(Guid roomId);
+        IEnumerable<Room> GetAll();
+        void Add(Room room);
+        void Delete(Guid roomId);
+        void Update(Room room);
+        void Save();
     }
 }

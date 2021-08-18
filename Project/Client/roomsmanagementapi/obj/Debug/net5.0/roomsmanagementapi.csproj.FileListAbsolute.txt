@@ -132,3 +132,5 @@ D:\Facultate\LicenseLMS\Project\Client\roomsmanagementapi\bin\Debug\net5.0\runti
 D:\Facultate\LicenseLMS\Project\Client\roomsmanagementapi\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\Facultate\LicenseLMS\Project\Client\roomsmanagementapi\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\Facultate\LicenseLMS\Project\Client\roomsmanagementapi\obj\Debug\net5.0\roomsmanagementapi.csprojAssemblyReference.cache
+D:\Facultate\LicenseLMS\Project\Client\roomsmanagementapi\bin\Debug\net5.0\RoomsAPI.Models.dll
+D:\Facultate\LicenseLMS\Project\Client\roomsmanagementapi\bin\Debug\net5.0\RoomsAPI.Models.pdb

@@ -3111,6 +3111,53 @@
           "bin/placeholder/GroupsAPI.Models.dll": {}
         }
       },
+      "RoomsAPI.Client/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.AspNet.WebApi.Client": "5.2.7",
+          "RoomsAPI.Models": "1.0.0",
+          "System.Net.Http": "4.3.4",
+          "TokensService": "1.0.0",
+          "roomsmanagementapi": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RoomsAPI.Client.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RoomsAPI.Client.dll": {}
+        }
+      },
+      "RoomsAPI.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/RoomsAPI.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RoomsAPI.Models.dll": {}
+        }
+      },
+      "roomsmanagementapi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "IdentityServer4.AccessTokenValidation": "3.0.1",
+          "Microsoft.EntityFrameworkCore": "5.0.6",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.6",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
+          "RoomsAPI.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/roomsmanagementapi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/roomsmanagementapi.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "TokensService/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -9748,6 +9795,21 @@
       "path": "../GroupsApi.Models/GroupsAPI.Models.csproj",
       "msbuildProject": "../GroupsApi.Models/GroupsAPI.Models.csproj"
     },
+    "RoomsAPI.Client/1.0.0": {
+      "type": "project",
+      "path": "../RoomsAPI.Client/RoomsAPI.Client.csproj",
+      "msbuildProject": "../RoomsAPI.Client/RoomsAPI.Client.csproj"
+    },
+    "RoomsAPI.Models/1.0.0": {
+      "type": "project",
+      "path": "../RoomsAPI.Models/RoomsAPI.Models.csproj",
+      "msbuildProject": "../RoomsAPI.Models/RoomsAPI.Models.csproj"
+    },
+    "roomsmanagementapi/1.0.0": {
+      "type": "project",
+      "path": "../roomsmanagementapi/roomsmanagementapi.csproj",
+      "msbuildProject": "../roomsmanagementapi/roomsmanagementapi.csproj"
+    },
     "TokensService/1.0.0": {
       "type": "project",
       "path": "../TokenService/TokensService.csproj",
@@ -9768,6 +9830,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.6",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2",
       "Newtonsoft.Json >= 13.0.1",
+      "RoomsAPI.Client >= 1.0.0",
+      "RoomsAPI.Models >= 1.0.0",
       "TokensService >= 1.0.0"
     ]
   },
@@ -9809,6 +9873,12 @@
             },
             "D:\\Facultate\\LicenseLMS\\Project\\Client\\GroupsApi.Models\\GroupsAPI.Models.csproj": {
               "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\GroupsApi.Models\\GroupsAPI.Models.csproj"
+            },
+            "D:\\Facultate\\LicenseLMS\\Project\\Client\\RoomsAPI.Client\\RoomsAPI.Client.csproj": {
+              "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\RoomsAPI.Client\\RoomsAPI.Client.csproj"
+            },
+            "D:\\Facultate\\LicenseLMS\\Project\\Client\\RoomsAPI.Models\\RoomsAPI.Models.csproj": {
+              "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\RoomsAPI.Models\\RoomsAPI.Models.csproj"
             },
             "D:\\Facultate\\LicenseLMS\\Project\\Client\\TokenService\\TokensService.csproj": {
               "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\TokenService\\TokensService.csproj"

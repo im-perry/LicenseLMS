@@ -166,5 +166,6 @@ D:\Facultate\LicenseLMS\Project\Client\scheduleapi\bin\Debug\net5.0\ActivitiesAP
 D:\Facultate\LicenseLMS\Project\Client\scheduleapi\bin\Debug\net5.0\ActivitiesAPI.Models.pdb
 D:\Facultate\LicenseLMS\Project\Client\scheduleapi\bin\Debug\net5.0\GroupsAPI.Models.dll
 D:\Facultate\LicenseLMS\Project\Client\scheduleapi\bin\Debug\net5.0\GroupsAPI.Models.pdb
-D:\Facultate\LicenseLMS\Project\Client\scheduleapi\bin\Debug\net5.0\activitiesapi.StaticWebAssets.xml
 D:\Facultate\LicenseLMS\Project\Client\scheduleapi\obj\Debug\net5.0\scheduleapi.MvcApplicationPartsAssemblyInfo.cs
+D:\Facultate\LicenseLMS\Project\Client\scheduleapi\bin\Debug\net5.0\RoomsAPI.Models.dll
+D:\Facultate\LicenseLMS\Project\Client\scheduleapi\bin\Debug\net5.0\RoomsAPI.Models.pdb

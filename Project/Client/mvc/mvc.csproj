@@ -31,6 +31,8 @@
     <ProjectReference Include="..\ActivitiesAPI.Models\ActivitiesAPI.Models.csproj" />
     <ProjectReference Include="..\GroupsApi.Client\GroupsAPI.Client.csproj" />
     <ProjectReference Include="..\GroupsApi.Models\GroupsAPI.Models.csproj" />
+    <ProjectReference Include="..\RoomsAPI.Client\RoomsAPI.Client.csproj" />
+    <ProjectReference Include="..\RoomsAPI.Models\RoomsAPI.Models.csproj" />
     <ProjectReference Include="..\TokenService\TokensService.csproj" />
   </ItemGroup>
 
