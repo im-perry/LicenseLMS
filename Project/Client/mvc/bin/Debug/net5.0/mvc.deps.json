@@ -47,6 +47,10 @@
           "Newtonsoft.Json": "13.0.1",
           "RoomsAPI.Client": "1.0.0",
           "RoomsAPI.Models": "1.0.0",
+          "ScheduleAPI.Client": "1.0.0",
+          "ScheduleAPI.Models": "1.0.0",
+          "TeachingAPI.Client": "1.0.0",
+          "TeachingAPI.Models": "1.0.0",
           "TokensService": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
@@ -2634,6 +2638,90 @@
         },
         "compile": {
           "roomsmanagementapi.dll": {}
+        }
+      },
+      "scheduleapi/1.0.0": {
+        "dependencies": {
+          "IdentityServer4.AccessTokenValidation": "3.0.1",
+          "Microsoft.EntityFrameworkCore": "5.0.6",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.6",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
+          "ScheduleAPI.Models": "1.0.0"
+        },
+        "runtime": {
+          "scheduleapi.dll": {}
+        },
+        "compile": {
+          "scheduleapi.dll": {}
+        }
+      },
+      "ScheduleAPI.Client/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNet.WebApi.Client": "5.2.7",
+          "ScheduleAPI.Models": "1.0.0",
+          "System.Net.Http": "4.3.4",
+          "TokensService": "1.0.0",
+          "scheduleapi": "1.0.0"
+        },
+        "runtime": {
+          "ScheduleAPI.Client.dll": {}
+        },
+        "compile": {
+          "ScheduleAPI.Client.dll": {}
+        }
+      },
+      "ScheduleAPI.Models/1.0.0": {
+        "dependencies": {
+          "ActivitiesAPI.Models": "1.0.0",
+          "GroupsAPI.Models": "1.0.0"
+        },
+        "runtime": {
+          "ScheduleAPI.Models.dll": {}
+        },
+        "compile": {
+          "ScheduleAPI.Models.dll": {}
+        }
+      },
+      "teachingapi/1.0.0": {
+        "dependencies": {
+          "IdentityServer4.AccessTokenValidation": "3.0.1",
+          "Microsoft.EntityFrameworkCore": "5.0.6",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.6",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
+          "TeachingAPI.Models": "1.0.0"
+        },
+        "runtime": {
+          "teachingapi.dll": {}
+        },
+        "compile": {
+          "teachingapi.dll": {}
+        }
+      },
+      "TeachingAPI.Client/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNet.WebApi.Client": "5.2.7",
+          "System.Net.Http": "4.3.4",
+          "TeachingAPI.Models": "1.0.0",
+          "TokensService": "1.0.0",
+          "teachingapi": "1.0.0"
+        },
+        "runtime": {
+          "TeachingAPI.Client.dll": {}
+        },
+        "compile": {
+          "TeachingAPI.Client.dll": {}
+        }
+      },
+      "TeachingAPI.Models/1.0.0": {
+        "dependencies": {
+          "ActivitiesAPI.Models": "1.0.0",
+          "GroupsAPI.Models": "1.0.0"
+        },
+        "runtime": {
+          "TeachingAPI.Models.dll": {}
+        },
+        "compile": {
+          "TeachingAPI.Models.dll": {}
         }
       },
       "TokensService/1.0.0": {
@@ -5616,6 +5704,36 @@
       "sha512": ""
     },
     "roomsmanagementapi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "scheduleapi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ScheduleAPI.Client/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ScheduleAPI.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "teachingapi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TeachingAPI.Client/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TeachingAPI.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

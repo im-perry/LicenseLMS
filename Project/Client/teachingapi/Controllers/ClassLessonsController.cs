@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Transactions;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using teachingapi;
-using teachingapi.Models;
 using teachingapi.Repositories;
+using TeachingAPI.Models;
 
 namespace teachingapi.Controllers
 {
@@ -35,15 +29,15 @@ namespace teachingapi.Controllers
 
         // GET: ClassLessons/5
         [HttpGet("{id}")]
-        public IActionResult GetClassLesson(int id)
+        public IActionResult GetClassLesson([FromRoute] Guid id)
         {
             var lesson = _lessonRepository.GetLessonById(id);
             return new OkObjectResult(lesson);
         }
 
         // PUT: ClassLessons/
-        [HttpPut]
-        public IActionResult PutClassLesson(ClassLesson lesson)
+        [HttpPut("{lesson}")]
+        public IActionResult PutClassLesson([FromBody] ClassLesson lesson)
         {
             if (lesson != null)
             {
@@ -60,7 +54,7 @@ namespace teachingapi.Controllers
 
         // POST: ClassLessons
         [HttpPost]
-        public IActionResult PostClassLesson(ClassLesson lesson)
+        public IActionResult PostClassLesson([FromBody] ClassLesson lesson)
         {
             using (var scope = new TransactionScope())
             {
@@ -72,7 +66,7 @@ namespace teachingapi.Controllers
 
         // DELETE: ClassLessons/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteClassLesson(int id)
+        public IActionResult DeleteClassLesson([FromRoute] Guid id)
         {
             _lessonRepository.Delete(id);
             return new OkResult();

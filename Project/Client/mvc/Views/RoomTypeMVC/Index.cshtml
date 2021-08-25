@@ -1,0 +1,36 @@
+﻿@model IEnumerable<RoomsAPI.Models.Type>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Room Types</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table bg-light">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id=item.TypeId }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.TypeId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.TypeId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

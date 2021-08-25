@@ -3158,6 +3158,108 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "scheduleapi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "IdentityServer4.AccessTokenValidation": "3.0.1",
+          "Microsoft.EntityFrameworkCore": "5.0.6",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.6",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
+          "ScheduleAPI.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/scheduleapi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/scheduleapi.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "ScheduleAPI.Client/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.AspNet.WebApi.Client": "5.2.7",
+          "ScheduleAPI.Models": "1.0.0",
+          "System.Net.Http": "4.3.4",
+          "TokensService": "1.0.0",
+          "scheduleapi": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ScheduleAPI.Client.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ScheduleAPI.Client.dll": {}
+        }
+      },
+      "ScheduleAPI.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "ActivitiesAPI.Models": "1.0.0",
+          "GroupsAPI.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ScheduleAPI.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ScheduleAPI.Models.dll": {}
+        }
+      },
+      "teachingapi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "IdentityServer4.AccessTokenValidation": "3.0.1",
+          "Microsoft.EntityFrameworkCore": "5.0.6",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.6",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
+          "TeachingAPI.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/teachingapi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/teachingapi.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "TeachingAPI.Client/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.AspNet.WebApi.Client": "5.2.7",
+          "System.Net.Http": "4.3.4",
+          "TeachingAPI.Models": "1.0.0",
+          "TokensService": "1.0.0",
+          "teachingapi": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TeachingAPI.Client.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TeachingAPI.Client.dll": {}
+        }
+      },
+      "TeachingAPI.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "ActivitiesAPI.Models": "1.0.0",
+          "GroupsAPI.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TeachingAPI.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TeachingAPI.Models.dll": {}
+        }
+      },
       "TokensService/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -9810,6 +9912,36 @@
       "path": "../roomsmanagementapi/roomsmanagementapi.csproj",
       "msbuildProject": "../roomsmanagementapi/roomsmanagementapi.csproj"
     },
+    "scheduleapi/1.0.0": {
+      "type": "project",
+      "path": "../scheduleapi/scheduleapi.csproj",
+      "msbuildProject": "../scheduleapi/scheduleapi.csproj"
+    },
+    "ScheduleAPI.Client/1.0.0": {
+      "type": "project",
+      "path": "../ScheduleAPIClient/ScheduleAPI.Client.csproj",
+      "msbuildProject": "../ScheduleAPIClient/ScheduleAPI.Client.csproj"
+    },
+    "ScheduleAPI.Models/1.0.0": {
+      "type": "project",
+      "path": "../ScheduleAPI.Models/ScheduleAPI.Models.csproj",
+      "msbuildProject": "../ScheduleAPI.Models/ScheduleAPI.Models.csproj"
+    },
+    "teachingapi/1.0.0": {
+      "type": "project",
+      "path": "../teachingapi/teachingapi.csproj",
+      "msbuildProject": "../teachingapi/teachingapi.csproj"
+    },
+    "TeachingAPI.Client/1.0.0": {
+      "type": "project",
+      "path": "../TeachingAPI.Client/TeachingAPI.Client.csproj",
+      "msbuildProject": "../TeachingAPI.Client/TeachingAPI.Client.csproj"
+    },
+    "TeachingAPI.Models/1.0.0": {
+      "type": "project",
+      "path": "../TEachingAPI.Models/TeachingAPI.Models.csproj",
+      "msbuildProject": "../TEachingAPI.Models/TeachingAPI.Models.csproj"
+    },
     "TokensService/1.0.0": {
       "type": "project",
       "path": "../TokenService/TokensService.csproj",
@@ -9832,6 +9964,10 @@
       "Newtonsoft.Json >= 13.0.1",
       "RoomsAPI.Client >= 1.0.0",
       "RoomsAPI.Models >= 1.0.0",
+      "ScheduleAPI.Client >= 1.0.0",
+      "ScheduleAPI.Models >= 1.0.0",
+      "TeachingAPI.Client >= 1.0.0",
+      "TeachingAPI.Models >= 1.0.0",
       "TokensService >= 1.0.0"
     ]
   },
@@ -9879,6 +10015,18 @@
             },
             "D:\\Facultate\\LicenseLMS\\Project\\Client\\RoomsAPI.Models\\RoomsAPI.Models.csproj": {
               "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\RoomsAPI.Models\\RoomsAPI.Models.csproj"
+            },
+            "D:\\Facultate\\LicenseLMS\\Project\\Client\\ScheduleAPI.Models\\ScheduleAPI.Models.csproj": {
+              "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\ScheduleAPI.Models\\ScheduleAPI.Models.csproj"
+            },
+            "D:\\Facultate\\LicenseLMS\\Project\\Client\\ScheduleAPIClient\\ScheduleAPI.Client.csproj": {
+              "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\ScheduleAPIClient\\ScheduleAPI.Client.csproj"
+            },
+            "D:\\Facultate\\LicenseLMS\\Project\\Client\\TeachingAPI.Client\\TeachingAPI.Client.csproj": {
+              "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\TeachingAPI.Client\\TeachingAPI.Client.csproj"
+            },
+            "D:\\Facultate\\LicenseLMS\\Project\\Client\\TEachingAPI.Models\\TeachingAPI.Models.csproj": {
+              "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\TEachingAPI.Models\\TeachingAPI.Models.csproj"
             },
             "D:\\Facultate\\LicenseLMS\\Project\\Client\\TokenService\\TokensService.csproj": {
               "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\TokenService\\TokensService.csproj"

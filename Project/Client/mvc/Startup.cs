@@ -6,6 +6,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RoomsAPI.Client;
+using ScheduleAPI.Client;
+using TeachingAPI.Client;
 using TokensService;
 
 namespace mvc
@@ -50,12 +52,20 @@ namespace mvc
             services.AddScoped<SubgroupsAPIClient>();
             services.AddScoped<SpecializationsAPIClient>();
             services.AddScoped<RoomsAPIClient>();
+            services.AddScoped<TypesAPIClient>();
+            services.AddScoped<ScheduleAPIClient>();
+            services.AddScoped<ClassesAPIClient>();
+            services.AddScoped<ClassLessonsAPIClient>();
 
             services.AddHttpClient<ActivitiesAPIClient>();
             services.AddHttpClient<GroupsAPIClient>();
             services.AddHttpClient<SubgroupsAPIClient>();
             services.AddHttpClient<SpecializationsAPIClient>();
             services.AddHttpClient<RoomsAPIClient>();
+            services.AddHttpClient<TypesAPIClient>();
+            services.AddHttpClient<ScheduleAPIClient>();
+            services.AddScoped<ClassesAPIClient>();
+            services.AddScoped<ClassLessonsAPIClient>();
 
             services.Configure<IdentityServerSettings>(Configuration.GetSection("IdentityServerSettings"));
             services.AddSingleton<ITokenService, TokenService>();

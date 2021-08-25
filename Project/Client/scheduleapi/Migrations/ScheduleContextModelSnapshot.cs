@@ -16,10 +16,10 @@ namespace scheduleapi.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.7")
+                .HasAnnotation("ProductVersion", "5.0.6")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("activitiesapi.Models.Activity", b =>
+            modelBuilder.Entity("ActivitiesAPI.Models.Activity", b =>
                 {
                     b.Property<Guid>("ActivityId")
                         .ValueGeneratedOnAdd()
@@ -45,21 +45,23 @@ namespace scheduleapi.Migrations
                     b.ToTable("Activity");
                 });
 
-            modelBuilder.Entity("groupsapi.Models.Group", b =>
+            modelBuilder.Entity("GroupsAPI.Models.Group", b =>
                 {
-                    b.Property<int>("GroupId")
+                    b.Property<Guid>("GroupId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ScheduleId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("ScheduleId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("SpecialisationId")
                         .HasColumnType("int");
+
+                    b.Property<Guid?>("SpecialisationId1")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("TutorId")
                         .HasColumnType("int");
@@ -71,17 +73,16 @@ namespace scheduleapi.Migrations
 
                     b.HasIndex("ScheduleId");
 
-                    b.HasIndex("SpecialisationId");
+                    b.HasIndex("SpecialisationId1");
 
                     b.ToTable("Group");
                 });
 
-            modelBuilder.Entity("groupsapi.Models.Specialisation", b =>
+            modelBuilder.Entity("GroupsAPI.Models.Specialisation", b =>
                 {
-                    b.Property<int>("SpecialisationId")
+                    b.Property<Guid>("SpecialisationId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
@@ -91,21 +92,20 @@ namespace scheduleapi.Migrations
                     b.ToTable("Specialisation");
                 });
 
-            modelBuilder.Entity("groupsapi.Models.Subgroup", b =>
+            modelBuilder.Entity("GroupsAPI.Models.Subgroup", b =>
                 {
-                    b.Property<int>("SubgroupId")
+                    b.Property<Guid>("SubgroupId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("GroupId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("GroupId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ScheduleId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("ScheduleId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("SubgroupId");
 
@@ -116,17 +116,13 @@ namespace scheduleapi.Migrations
                     b.ToTable("Subgroup");
                 });
 
-            modelBuilder.Entity("scheduleapi.Models.Schedule", b =>
+            modelBuilder.Entity("ScheduleAPI.Models.Schedule", b =>
                 {
-                    b.Property<int>("ScheduleId")
+                    b.Property<Guid>("ScheduleId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("ActivityId")
-                        .HasColumnType("int");
-
-                    b.Property<Guid?>("ActivityId1")
+                    b.Property<Guid>("ActivityId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("End")
@@ -140,56 +136,56 @@ namespace scheduleapi.Migrations
 
                     b.HasKey("ScheduleId");
 
-                    b.HasIndex("ActivityId1");
+                    b.HasIndex("ActivityId");
 
                     b.ToTable("Schedules");
                 });
 
-            modelBuilder.Entity("groupsapi.Models.Group", b =>
+            modelBuilder.Entity("GroupsAPI.Models.Group", b =>
                 {
-                    b.HasOne("scheduleapi.Models.Schedule", null)
+                    b.HasOne("ScheduleAPI.Models.Schedule", null)
                         .WithMany("Groups")
                         .HasForeignKey("ScheduleId");
 
-                    b.HasOne("groupsapi.Models.Specialisation", "Specialisation")
+                    b.HasOne("GroupsAPI.Models.Specialisation", "Specialisation")
                         .WithMany()
-                        .HasForeignKey("SpecialisationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SpecialisationId1");
 
                     b.Navigation("Specialisation");
                 });
 
-            modelBuilder.Entity("groupsapi.Models.Subgroup", b =>
+            modelBuilder.Entity("GroupsAPI.Models.Subgroup", b =>
                 {
-                    b.HasOne("groupsapi.Models.Group", "Group")
+                    b.HasOne("GroupsAPI.Models.Group", "Group")
                         .WithMany("Subgroups")
                         .HasForeignKey("GroupId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("scheduleapi.Models.Schedule", null)
+                    b.HasOne("ScheduleAPI.Models.Schedule", null)
                         .WithMany("Subgroups")
                         .HasForeignKey("ScheduleId");
 
                     b.Navigation("Group");
                 });
 
-            modelBuilder.Entity("scheduleapi.Models.Schedule", b =>
+            modelBuilder.Entity("ScheduleAPI.Models.Schedule", b =>
                 {
-                    b.HasOne("activitiesapi.Models.Activity", "Activity")
+                    b.HasOne("ActivitiesAPI.Models.Activity", "Activity")
                         .WithMany()
-                        .HasForeignKey("ActivityId1");
+                        .HasForeignKey("ActivityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Activity");
                 });
 
-            modelBuilder.Entity("groupsapi.Models.Group", b =>
+            modelBuilder.Entity("GroupsAPI.Models.Group", b =>
                 {
                     b.Navigation("Subgroups");
                 });
 
-            modelBuilder.Entity("scheduleapi.Models.Schedule", b =>
+            modelBuilder.Entity("ScheduleAPI.Models.Schedule", b =>
                 {
                     b.Navigation("Groups");
 

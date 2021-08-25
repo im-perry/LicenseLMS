@@ -27,9 +27,6 @@ namespace scheduleapi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddControllers();
-
             services.AddAuthentication("Bearer")
                 .AddIdentityServerAuthentication("Bearer", options =>
                 {
@@ -40,6 +37,12 @@ namespace scheduleapi
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
+
+            services.AddControllers();
+            services.AddControllersWithViews();
+            services.AddRazorPages();
+            services.AddHttpContextAccessor();
+
             services.AddTransient<IScheduleRepository, ScheduleRepository>();
         }
 

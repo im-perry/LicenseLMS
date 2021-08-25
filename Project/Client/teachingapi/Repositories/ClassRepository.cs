@@ -2,8 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using teachingapi.Models;
+using TeachingAPI.Models;
 
 namespace teachingapi.Repositories
 {
@@ -16,7 +15,7 @@ namespace teachingapi.Repositories
             _dbContext = dbContext;
         }
 
-        public Class GetClassById(int classId)
+        public Class GetClassById(Guid classId)
         {
             return _dbContext.Classes.Find(classId);
         }
@@ -32,7 +31,7 @@ namespace teachingapi.Repositories
             Save();
         }
 
-        public void Delete(int classId)
+        public void Delete(Guid classId)
         {
             var classs = _dbContext.Classes.Find(classId);
             _dbContext.Classes.Remove(classs);

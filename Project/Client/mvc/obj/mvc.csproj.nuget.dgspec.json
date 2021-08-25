@@ -480,6 +480,18 @@
               "D:\\Facultate\\LicenseLMS\\Project\\Client\\RoomsAPI.Models\\RoomsAPI.Models.csproj": {
                 "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\RoomsAPI.Models\\RoomsAPI.Models.csproj"
               },
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\ScheduleAPI.Models\\ScheduleAPI.Models.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\ScheduleAPI.Models\\ScheduleAPI.Models.csproj"
+              },
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\ScheduleAPIClient\\ScheduleAPI.Client.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\ScheduleAPIClient\\ScheduleAPI.Client.csproj"
+              },
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\TeachingAPI.Client\\TeachingAPI.Client.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\TeachingAPI.Client\\TeachingAPI.Client.csproj"
+              },
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\TEachingAPI.Models\\TeachingAPI.Models.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\TEachingAPI.Models\\TeachingAPI.Models.csproj"
+              },
               "D:\\Facultate\\LicenseLMS\\Project\\Client\\TokenService\\TokensService.csproj": {
                 "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\TokenService\\TokensService.csproj"
               }
@@ -707,6 +719,446 @@
             "projectReferences": {
               "D:\\Facultate\\LicenseLMS\\Project\\Client\\RoomsAPI.Models\\RoomsAPI.Models.csproj": {
                 "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\RoomsAPI.Models\\RoomsAPI.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "IdentityServer4.AccessTokenValidation": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Facultate\\LicenseLMS\\Project\\Client\\ScheduleAPI.Models\\ScheduleAPI.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Facultate\\LicenseLMS\\Project\\Client\\ScheduleAPI.Models\\ScheduleAPI.Models.csproj",
+        "projectName": "ScheduleAPI.Models",
+        "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\ScheduleAPI.Models\\ScheduleAPI.Models.csproj",
+        "packagesPath": "C:\\Users\\peris\\.nuget\\packages\\",
+        "outputPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\ScheduleAPI.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\peris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\ActivitiesAPI.Models\\ActivitiesAPI.Models.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\ActivitiesAPI.Models\\ActivitiesAPI.Models.csproj"
+              },
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\GroupsApi.Models\\GroupsAPI.Models.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\GroupsApi.Models\\GroupsAPI.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Facultate\\LicenseLMS\\Project\\Client\\ScheduleAPIClient\\ScheduleAPI.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Facultate\\LicenseLMS\\Project\\Client\\ScheduleAPIClient\\ScheduleAPI.Client.csproj",
+        "projectName": "ScheduleAPI.Client",
+        "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\ScheduleAPIClient\\ScheduleAPI.Client.csproj",
+        "packagesPath": "C:\\Users\\peris\\.nuget\\packages\\",
+        "outputPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\ScheduleAPIClient\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\peris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\ScheduleAPI.Models\\ScheduleAPI.Models.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\ScheduleAPI.Models\\ScheduleAPI.Models.csproj"
+              },
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\scheduleapi\\scheduleapi.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\scheduleapi\\scheduleapi.csproj"
+              },
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\TokenService\\TokensService.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\TokenService\\TokensService.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Facultate\\LicenseLMS\\Project\\Client\\scheduleapi\\scheduleapi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Facultate\\LicenseLMS\\Project\\Client\\scheduleapi\\scheduleapi.csproj",
+        "projectName": "scheduleapi",
+        "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\scheduleapi\\scheduleapi.csproj",
+        "packagesPath": "C:\\Users\\peris\\.nuget\\packages\\",
+        "outputPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\scheduleapi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\peris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\ScheduleAPI.Models\\ScheduleAPI.Models.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\ScheduleAPI.Models\\ScheduleAPI.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "IdentityServer4.AccessTokenValidation": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Facultate\\LicenseLMS\\Project\\Client\\TeachingAPI.Client\\TeachingAPI.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Facultate\\LicenseLMS\\Project\\Client\\TeachingAPI.Client\\TeachingAPI.Client.csproj",
+        "projectName": "TeachingAPI.Client",
+        "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\TeachingAPI.Client\\TeachingAPI.Client.csproj",
+        "packagesPath": "C:\\Users\\peris\\.nuget\\packages\\",
+        "outputPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\TeachingAPI.Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\peris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\TEachingAPI.Models\\TeachingAPI.Models.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\TEachingAPI.Models\\TeachingAPI.Models.csproj"
+              },
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\teachingapi\\teachingapi.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\teachingapi\\teachingapi.csproj"
+              },
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\TokenService\\TokensService.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\TokenService\\TokensService.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Facultate\\LicenseLMS\\Project\\Client\\TEachingAPI.Models\\TeachingAPI.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Facultate\\LicenseLMS\\Project\\Client\\TEachingAPI.Models\\TeachingAPI.Models.csproj",
+        "projectName": "TeachingAPI.Models",
+        "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\TEachingAPI.Models\\TeachingAPI.Models.csproj",
+        "packagesPath": "C:\\Users\\peris\\.nuget\\packages\\",
+        "outputPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\TEachingAPI.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\peris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\ActivitiesAPI.Models\\ActivitiesAPI.Models.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\ActivitiesAPI.Models\\ActivitiesAPI.Models.csproj"
+              },
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\GroupsApi.Models\\GroupsAPI.Models.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\GroupsApi.Models\\GroupsAPI.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Facultate\\LicenseLMS\\Project\\Client\\teachingapi\\teachingapi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Facultate\\LicenseLMS\\Project\\Client\\teachingapi\\teachingapi.csproj",
+        "projectName": "teachingapi",
+        "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\teachingapi\\teachingapi.csproj",
+        "packagesPath": "C:\\Users\\peris\\.nuget\\packages\\",
+        "outputPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\teachingapi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\peris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Facultate\\LicenseLMS\\Project\\Client\\TEachingAPI.Models\\TeachingAPI.Models.csproj": {
+                "projectPath": "D:\\Facultate\\LicenseLMS\\Project\\Client\\TEachingAPI.Models\\TeachingAPI.Models.csproj"
               }
             }
           }

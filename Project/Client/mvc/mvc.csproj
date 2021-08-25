@@ -33,6 +33,10 @@
     <ProjectReference Include="..\GroupsApi.Models\GroupsAPI.Models.csproj" />
     <ProjectReference Include="..\RoomsAPI.Client\RoomsAPI.Client.csproj" />
     <ProjectReference Include="..\RoomsAPI.Models\RoomsAPI.Models.csproj" />
+    <ProjectReference Include="..\ScheduleAPI.Models\ScheduleAPI.Models.csproj" />
+    <ProjectReference Include="..\ScheduleAPIClient\ScheduleAPI.Client.csproj" />
+    <ProjectReference Include="..\TeachingAPI.Client\TeachingAPI.Client.csproj" />
+    <ProjectReference Include="..\TEachingAPI.Models\TeachingAPI.Models.csproj" />
     <ProjectReference Include="..\TokenService\TokensService.csproj" />
   </ItemGroup>
 

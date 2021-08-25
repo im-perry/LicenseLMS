@@ -1,9 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using scheduleapi.Models;
+using ScheduleAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace scheduleapi.Repositories
 {
@@ -16,7 +15,7 @@ namespace scheduleapi.Repositories
             _dbContext = dbContext;
         }
 
-        public Schedule GetScheduleById(int scheduleId)
+        public Schedule GetScheduleById(Guid scheduleId)
         {
             return _dbContext.Schedules.Find(scheduleId);
         }
@@ -32,7 +31,7 @@ namespace scheduleapi.Repositories
             Save();
         }
 
-        public void Delete(int scheduleId)
+        public void Delete(Guid scheduleId)
         {
             var schedule = _dbContext.Schedules.Find(scheduleId);
             _dbContext.Schedules.Remove(schedule);

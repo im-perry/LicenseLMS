@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "TeachingAPI.Models/1.0.0": {
+        "dependencies": {
+          "ActivitiesAPI.Models": "1.0.0",
+          "GroupsAPI.Models": "1.0.0"
+        },
+        "runtime": {
+          "TeachingAPI.Models.dll": {}
+        }
+      },
+      "ActivitiesAPI.Models/1.0.0": {
+        "runtime": {
+          "ActivitiesAPI.Models.dll": {}
+        }
+      },
+      "GroupsAPI.Models/1.0.0": {
+        "runtime": {
+          "GroupsAPI.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TeachingAPI.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ActivitiesAPI.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GroupsAPI.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,17 @@
+D:\Facultate\LicenseLMS\Project\Client\TEachingAPI.Models\bin\Debug\net5.0\TeachingAPI.Models.deps.json
+D:\Facultate\LicenseLMS\Project\Client\TEachingAPI.Models\bin\Debug\net5.0\TeachingAPI.Models.dll
+D:\Facultate\LicenseLMS\Project\Client\TEachingAPI.Models\bin\Debug\net5.0\ref\TeachingAPI.Models.dll
+D:\Facultate\LicenseLMS\Project\Client\TEachingAPI.Models\bin\Debug\net5.0\TeachingAPI.Models.pdb
+D:\Facultate\LicenseLMS\Project\Client\TEachingAPI.Models\bin\Debug\net5.0\ActivitiesAPI.Models.dll
+D:\Facultate\LicenseLMS\Project\Client\TEachingAPI.Models\bin\Debug\net5.0\GroupsAPI.Models.dll
+D:\Facultate\LicenseLMS\Project\Client\TEachingAPI.Models\bin\Debug\net5.0\ActivitiesAPI.Models.pdb
+D:\Facultate\LicenseLMS\Project\Client\TEachingAPI.Models\bin\Debug\net5.0\GroupsAPI.Models.pdb
+D:\Facultate\LicenseLMS\Project\Client\TEachingAPI.Models\obj\Debug\net5.0\TeachingAPI.Models.csprojAssemblyReference.cache
+D:\Facultate\LicenseLMS\Project\Client\TEachingAPI.Models\obj\Debug\net5.0\TeachingAPI.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Facultate\LicenseLMS\Project\Client\TEachingAPI.Models\obj\Debug\net5.0\TeachingAPI.Models.AssemblyInfoInputs.cache
+D:\Facultate\LicenseLMS\Project\Client\TEachingAPI.Models\obj\Debug\net5.0\TeachingAPI.Models.AssemblyInfo.cs
+D:\Facultate\LicenseLMS\Project\Client\TEachingAPI.Models\obj\Debug\net5.0\TeachingAPI.Models.csproj.CoreCompileInputs.cache
+D:\Facultate\LicenseLMS\Project\Client\TEachingAPI.Models\obj\Debug\net5.0\TeachingAPI.Models.csproj.CopyComplete
+D:\Facultate\LicenseLMS\Project\Client\TEachingAPI.Models\obj\Debug\net5.0\TeachingAPI.Models.dll
+D:\Facultate\LicenseLMS\Project\Client\TEachingAPI.Models\obj\Debug\net5.0\ref\TeachingAPI.Models.dll
+D:\Facultate\LicenseLMS\Project\Client\TEachingAPI.Models\obj\Debug\net5.0\TeachingAPI.Models.pdb

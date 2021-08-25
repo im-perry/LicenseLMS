@@ -1,17 +1,15 @@
-﻿using scheduleapi.Models;
+﻿using ScheduleAPI.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace scheduleapi.Repositories
 {
     public interface IScheduleRepository
     {
-        Schedule GetScheduleById(int scheduleId);
+        Schedule GetScheduleById(Guid scheduleId);
         IEnumerable<Schedule> GetAll();
         void Add(Schedule schedule);
-        void Delete(int scheduleId);
+        void Delete(Guid scheduleId);
         void Update(Schedule schedule);
         void Save();
     }

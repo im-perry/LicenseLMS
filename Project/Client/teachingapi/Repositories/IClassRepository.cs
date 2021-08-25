@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using teachingapi.Models;
+using TeachingAPI.Models;
 
 namespace teachingapi.Repositories
 {
     public interface IClassRepository
     {
-        Class GetClassById(int classId);
+        Class GetClassById(Guid classId);
         IEnumerable<Class> GetAll();
         void Add(Class classs);
-        void Delete(int classId);
+        void Delete(Guid classId);
         void Update(Class classs);
         void Save();
     }

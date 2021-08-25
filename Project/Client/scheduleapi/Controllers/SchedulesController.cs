@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Transactions;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using scheduleapi;
-using scheduleapi.Models;
 using scheduleapi.Repositories;
+using ScheduleAPI.Models;
 
 namespace scheduleapi.Controllers
 {
@@ -35,15 +29,15 @@ namespace scheduleapi.Controllers
 
         // GET: Schedules/5
         [HttpGet("{id}")]
-        public IActionResult GetSchedule(int id)
+        public IActionResult GetSchedule([FromRoute] Guid id)
         {
             var schedule = _scheduleRepository.GetScheduleById(id);
             return new OkObjectResult(schedule);
         }
 
         // PUT: Schedules/5
-        [HttpPut]
-        public IActionResult PutSchedule(Schedule schedule)
+        [HttpPut("{schedule}")]
+        public IActionResult PutSchedule([FromBody] Schedule schedule)
         {
             if (schedule != null)
                 {
@@ -60,7 +54,7 @@ namespace scheduleapi.Controllers
 
         // POST: Schedules
         [HttpPost]
-        public IActionResult PostSchedule(Schedule schedule)
+        public IActionResult PostSchedule([FromBody] Schedule schedule)
         {
             using (var scope = new TransactionScope())
             {
@@ -72,7 +66,7 @@ namespace scheduleapi.Controllers
 
         // DELETE: Schedules/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteSchedule(int id)
+        public IActionResult DeleteSchedule([FromRoute] Guid id)
         {
             _scheduleRepository.Delete(id);
             return new OkResult();

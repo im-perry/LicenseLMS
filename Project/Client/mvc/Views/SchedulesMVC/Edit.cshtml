@@ -1,0 +1,70 @@
+﻿@model ScheduleAPI.Models.Schedule
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Eay Learning</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body style="overflow-x: hidden;">
+    <div class="container-main">
+        <h1>Edit</h1>
+        <h4>Schedule</h4>
+        <div class ="bg-light">
+            <div style="margin: 20px;">
+                <hr />
+                <div class="row">
+                    <div class="col-md-4">
+                        <form asp-action="Edit">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="ActivityId" class="control-label"></label>
+                                <input asp-for="ActivityId" class="form-control" />
+                                <span asp-validation-for="ActivityId" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Groups" class="control-label"></label>
+                                <input asp-for="Groups" class="form-control" />
+                                <span asp-validation-for="Groups" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Subgroups" class="control-label"></label>
+                                <input asp-for="Subgroups" class="form-control" />
+                                <span asp-validation-for="Subgroups" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="TeacherId" class="control-label"></label>
+                                <input asp-for="TeacherId" class="form-control" />
+                                <span asp-validation-for="TeacherId" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Start" class="control-label"></label>
+                                <input asp-for="Start" class="form-control" />
+                                <span asp-validation-for="Start" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="End" class="control-label"></label>
+                                <input asp-for="End" class="form-control" />
+                                <span asp-validation-for="End" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Save" class="btn btn-primary" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </div>
+</body>
+</html>

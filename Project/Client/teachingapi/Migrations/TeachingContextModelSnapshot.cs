@@ -16,10 +16,10 @@ namespace teachingapi.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.7")
+                .HasAnnotation("ProductVersion", "5.0.6")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("activitiesapi.Models.Activity", b =>
+            modelBuilder.Entity("ActivitiesAPI.Models.Activity", b =>
                 {
                     b.Property<Guid>("ActivityId")
                         .ValueGeneratedOnAdd()
@@ -45,21 +45,23 @@ namespace teachingapi.Migrations
                     b.ToTable("Activity");
                 });
 
-            modelBuilder.Entity("groupsapi.Models.Group", b =>
+            modelBuilder.Entity("GroupsAPI.Models.Group", b =>
                 {
-                    b.Property<int>("GroupId")
+                    b.Property<Guid>("GroupId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int?>("ClassId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("ClassId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("SpecialisationId")
                         .HasColumnType("int");
+
+                    b.Property<Guid?>("SpecialisationId1")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("TutorId")
                         .HasColumnType("int");
@@ -71,17 +73,16 @@ namespace teachingapi.Migrations
 
                     b.HasIndex("ClassId");
 
-                    b.HasIndex("SpecialisationId");
+                    b.HasIndex("SpecialisationId1");
 
                     b.ToTable("Group");
                 });
 
-            modelBuilder.Entity("groupsapi.Models.Specialisation", b =>
+            modelBuilder.Entity("GroupsAPI.Models.Specialisation", b =>
                 {
-                    b.Property<int>("SpecialisationId")
+                    b.Property<Guid>("SpecialisationId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
@@ -91,18 +92,17 @@ namespace teachingapi.Migrations
                     b.ToTable("Specialisation");
                 });
 
-            modelBuilder.Entity("groupsapi.Models.Subgroup", b =>
+            modelBuilder.Entity("GroupsAPI.Models.Subgroup", b =>
                 {
-                    b.Property<int>("SubgroupId")
+                    b.Property<Guid>("SubgroupId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int?>("ClassId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("ClassId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("GroupId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("GroupId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
@@ -116,17 +116,13 @@ namespace teachingapi.Migrations
                     b.ToTable("Subgroup");
                 });
 
-            modelBuilder.Entity("teachingapi.Models.Class", b =>
+            modelBuilder.Entity("TeachingAPI.Models.Class", b =>
                 {
-                    b.Property<int>("ClassId")
+                    b.Property<Guid>("ClassId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("ActivityId")
-                        .HasColumnType("int");
-
-                    b.Property<Guid?>("ActivityId1")
+                    b.Property<Guid>("ActivityId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("AuthorId")
@@ -140,20 +136,19 @@ namespace teachingapi.Migrations
 
                     b.HasKey("ClassId");
 
-                    b.HasIndex("ActivityId1");
+                    b.HasIndex("ActivityId");
 
                     b.ToTable("Classes");
                 });
 
-            modelBuilder.Entity("teachingapi.Models.ClassLesson", b =>
+            modelBuilder.Entity("TeachingAPI.Models.ClassLesson", b =>
                 {
-                    b.Property<int>("LessonId")
+                    b.Property<Guid>("LessonId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("ClassId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("ClassId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -168,28 +163,26 @@ namespace teachingapi.Migrations
                     b.ToTable("ClassLessons");
                 });
 
-            modelBuilder.Entity("groupsapi.Models.Group", b =>
+            modelBuilder.Entity("GroupsAPI.Models.Group", b =>
                 {
-                    b.HasOne("teachingapi.Models.Class", null)
+                    b.HasOne("TeachingAPI.Models.Class", null)
                         .WithMany("Groups")
                         .HasForeignKey("ClassId");
 
-                    b.HasOne("groupsapi.Models.Specialisation", "Specialisation")
+                    b.HasOne("GroupsAPI.Models.Specialisation", "Specialisation")
                         .WithMany()
-                        .HasForeignKey("SpecialisationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SpecialisationId1");
 
                     b.Navigation("Specialisation");
                 });
 
-            modelBuilder.Entity("groupsapi.Models.Subgroup", b =>
+            modelBuilder.Entity("GroupsAPI.Models.Subgroup", b =>
                 {
-                    b.HasOne("teachingapi.Models.Class", null)
+                    b.HasOne("TeachingAPI.Models.Class", null)
                         .WithMany("Subgroups")
                         .HasForeignKey("ClassId");
 
-                    b.HasOne("groupsapi.Models.Group", "Group")
+                    b.HasOne("GroupsAPI.Models.Group", "Group")
                         .WithMany("Subgroups")
                         .HasForeignKey("GroupId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -198,18 +191,20 @@ namespace teachingapi.Migrations
                     b.Navigation("Group");
                 });
 
-            modelBuilder.Entity("teachingapi.Models.Class", b =>
+            modelBuilder.Entity("TeachingAPI.Models.Class", b =>
                 {
-                    b.HasOne("activitiesapi.Models.Activity", "Activity")
+                    b.HasOne("ActivitiesAPI.Models.Activity", "Activity")
                         .WithMany()
-                        .HasForeignKey("ActivityId1");
+                        .HasForeignKey("ActivityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Activity");
                 });
 
-            modelBuilder.Entity("teachingapi.Models.ClassLesson", b =>
+            modelBuilder.Entity("TeachingAPI.Models.ClassLesson", b =>
                 {
-                    b.HasOne("teachingapi.Models.Class", "Class")
+                    b.HasOne("TeachingAPI.Models.Class", "Class")
                         .WithMany("ClassLessons")
                         .HasForeignKey("ClassId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -218,12 +213,12 @@ namespace teachingapi.Migrations
                     b.Navigation("Class");
                 });
 
-            modelBuilder.Entity("groupsapi.Models.Group", b =>
+            modelBuilder.Entity("GroupsAPI.Models.Group", b =>
                 {
                     b.Navigation("Subgroups");
                 });
 
-            modelBuilder.Entity("teachingapi.Models.Class", b =>
+            modelBuilder.Entity("TeachingAPI.Models.Class", b =>
                 {
                     b.Navigation("ClassLessons");
 

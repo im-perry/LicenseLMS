@@ -16,8 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\activitiesapi\activitiesapi.csproj" />
-    <ProjectReference Include="..\groupsapi\groupsapi.csproj" />
+    <ProjectReference Include="..\TEachingAPI.Models\TeachingAPI.Models.csproj" />
   </ItemGroup>
 
 </Project>
