@@ -5,23 +5,23 @@ namespace GroupsAPI.Models
 {
     public class Group
     {
-        public Guid GroupId { get; set; }
+        public string GroupId { get; set; }
         public string Name { get; set; }
         public int Year { get; set; }
-        public int TutorId { get; set; }
-        public int SpecialisationId { get; set; }
+        public string TutorName { get; set; }
+        public string SpecialisationName { get; set; }
         public Specialisation Specialisation { get; set; }
         public List<Subgroup> Subgroups { get; set; }
 
-        public static Group Create(string name, int year, int tutorId , int specialisationId)
+        public static Group Create(string name, int year, string tutorName, string specialisationName)
         {
             Group group = new Group
             {
-                GroupId = Guid.NewGuid(),
+                GroupId = Guid.NewGuid().ToString(),
                 Name = name,
                 Year = year,
-                TutorId = tutorId,
-                SpecialisationId = specialisationId
+                TutorName = tutorName,
+                SpecialisationName = specialisationName
             };
             return group;
         }

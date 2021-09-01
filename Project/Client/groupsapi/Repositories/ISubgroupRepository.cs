@@ -6,10 +6,10 @@ namespace groupsapi.Repositories
 {
     public interface ISubgroupRepository
     {
-        Subgroup GetSubgroupById(Guid subgroupId);
+        Subgroup GetSubgroupById(string subgroupId);
         IEnumerable<Subgroup> GetAll();
         void Add(Subgroup subgroup);
-        void Delete(Guid subgroupId);
+        void Delete(string subgroupId);
         void Update(Subgroup subgroup);
         void Save();
     }

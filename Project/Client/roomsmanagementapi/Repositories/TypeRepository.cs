@@ -15,7 +15,7 @@ namespace roomsmanagementapi.Repositories
             _dbContext = dbContext;
         }
 
-        public Type GetTypeById(Guid typeId)
+        public Type GetTypeById(string typeId)
         {
             return _dbContext.Types.Find(typeId);
         }
@@ -31,7 +31,7 @@ namespace roomsmanagementapi.Repositories
             Save();
         }
 
-        public void Delete(Guid typeId)
+        public void Delete(string typeId)
         {
             var room = _dbContext.Types.Find(typeId);
             _dbContext.Types.Remove(room);
@@ -40,7 +40,15 @@ namespace roomsmanagementapi.Repositories
 
         public void Update(Type type)
         {
-            _dbContext.Entry(type).State = EntityState.Modified;
+            var update = _dbContext.Types
+                            .Where(update => update.TypeId.Equals(type.TypeId))
+                            .SingleOrDefault();
+
+            if (update != default(Type))
+            {
+                update.Name = type.Name;
+            }
+
             Save();
         }
 

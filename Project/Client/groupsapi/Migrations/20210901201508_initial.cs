@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace groupsapi.Migrations
 {
@@ -11,7 +10,7 @@ namespace groupsapi.Migrations
                 name: "Specialisations",
                 columns: table => new
                 {
-                    SpecialisationId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    SpecialisationId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -23,19 +22,19 @@ namespace groupsapi.Migrations
                 name: "Groups",
                 columns: table => new
                 {
-                    GroupId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    GroupId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Year = table.Column<int>(type: "int", nullable: false),
-                    TutorId = table.Column<int>(type: "int", nullable: false),
-                    SpecialisationId = table.Column<int>(type: "int", nullable: false),
-                    SpecialisationId1 = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    TutorName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SpecialisationName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SpecialisationId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Groups", x => x.GroupId);
                     table.ForeignKey(
-                        name: "FK_Groups_Specialisations_SpecialisationId1",
-                        column: x => x.SpecialisationId1,
+                        name: "FK_Groups_Specialisations_SpecialisationId",
+                        column: x => x.SpecialisationId,
                         principalTable: "Specialisations",
                         principalColumn: "SpecialisationId",
                         onDelete: ReferentialAction.Restrict);
@@ -45,9 +44,10 @@ namespace groupsapi.Migrations
                 name: "Subgroups",
                 columns: table => new
                 {
-                    SubgroupId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    SubgroupId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    GroupId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    GroupName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    GroupId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -57,13 +57,13 @@ namespace groupsapi.Migrations
                         column: x => x.GroupId,
                         principalTable: "Groups",
                         principalColumn: "GroupId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Groups_SpecialisationId1",
+                name: "IX_Groups_SpecialisationId",
                 table: "Groups",
-                column: "SpecialisationId1");
+                column: "SpecialisationId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Subgroups_GroupId",

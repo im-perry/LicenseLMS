@@ -11,7 +11,7 @@ namespace scheduleapi.Migrations
                 name: "Activity",
                 columns: table => new
                 {
-                    ActivityId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    ActivityId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Duration = table.Column<int>(type: "int", nullable: false),
                     Year = table.Column<int>(type: "int", nullable: false),
@@ -27,7 +27,7 @@ namespace scheduleapi.Migrations
                 name: "Specialisation",
                 columns: table => new
                 {
-                    SpecialisationId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    SpecialisationId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -39,9 +39,10 @@ namespace scheduleapi.Migrations
                 name: "Schedules",
                 columns: table => new
                 {
-                    ScheduleId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ActivityId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    TeacherId = table.Column<int>(type: "int", nullable: false),
+                    ScheduleId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ActivityName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ActivityId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    TeacherName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Start = table.Column<DateTime>(type: "datetime2", nullable: false),
                     End = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -53,20 +54,20 @@ namespace scheduleapi.Migrations
                         column: x => x.ActivityId,
                         principalTable: "Activity",
                         principalColumn: "ActivityId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Group",
                 columns: table => new
                 {
-                    GroupId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    GroupId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Year = table.Column<int>(type: "int", nullable: false),
-                    TutorId = table.Column<int>(type: "int", nullable: false),
-                    SpecialisationId = table.Column<int>(type: "int", nullable: false),
-                    SpecialisationId1 = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    ScheduleId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    TutorName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SpecialisationName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SpecialisationId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    ScheduleId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -78,8 +79,8 @@ namespace scheduleapi.Migrations
                         principalColumn: "ScheduleId",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Group_Specialisation_SpecialisationId1",
-                        column: x => x.SpecialisationId1,
+                        name: "FK_Group_Specialisation_SpecialisationId",
+                        column: x => x.SpecialisationId,
                         principalTable: "Specialisation",
                         principalColumn: "SpecialisationId",
                         onDelete: ReferentialAction.Restrict);
@@ -89,10 +90,11 @@ namespace scheduleapi.Migrations
                 name: "Subgroup",
                 columns: table => new
                 {
-                    SubgroupId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    SubgroupId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    GroupId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ScheduleId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    GroupName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    GroupId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    ScheduleId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -102,7 +104,7 @@ namespace scheduleapi.Migrations
                         column: x => x.GroupId,
                         principalTable: "Group",
                         principalColumn: "GroupId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Subgroup_Schedules_ScheduleId",
                         column: x => x.ScheduleId,
@@ -117,9 +119,9 @@ namespace scheduleapi.Migrations
                 column: "ScheduleId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Group_SpecialisationId1",
+                name: "IX_Group_SpecialisationId",
                 table: "Group",
-                column: "SpecialisationId1");
+                column: "SpecialisationId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Schedules_ActivityId",

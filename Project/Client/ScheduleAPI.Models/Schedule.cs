@@ -9,22 +9,22 @@ namespace   ScheduleAPI.Models
     public class Schedule
     {
         [Key]
-        public Guid ScheduleId { get; set; }
-        public Guid ActivityId { get; set; }
+        public string ScheduleId { get; set; }
+        public string ActivityName { get; set; }
         public Activity Activity { get; set; }
         public ICollection<Group> Groups { get; set; }
         public ICollection<Subgroup> Subgroups { get; set; }
-        public int TeacherId { get; set; }
+        public string TeacherName { get; set; }
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
 
-        public static Schedule Create(Guid activityId, int teacherId, DateTime start, DateTime end)
+        public static Schedule Create(string activityName, string teacherName, DateTime start, DateTime end)
         {
             Schedule schedule = new Schedule
             {
-                ScheduleId = Guid.NewGuid(),
-                ActivityId = activityId,
-                TeacherId = teacherId,
+                ScheduleId = Guid.NewGuid().ToString(),
+                ActivityName = activityName,
+                TeacherName = teacherName,
                 Start = start,
                 End = end
             };

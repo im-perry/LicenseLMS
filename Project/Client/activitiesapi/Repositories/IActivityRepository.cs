@@ -6,10 +6,10 @@ namespace activitiesapi.Repositories
 {
     public interface IActivityRepository
     {
-        Activity GetActivityById(Guid activityId);
+        Activity GetActivityById(string activityId);
         IEnumerable<Activity> GetAll();
         void Add(Activity activity);
-        void Delete(Guid activityId);
+        void Delete(string activityId);
         void Update(Activity activity);
         void Save();
     }

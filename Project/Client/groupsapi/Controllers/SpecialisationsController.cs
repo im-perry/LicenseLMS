@@ -29,7 +29,7 @@ namespace groupsapi.Controllers
 
         // GET: Specialisations/5
         [HttpGet("{id}")]
-        public IActionResult GetSpecialisation([FromRoute] Guid id)
+        public IActionResult GetSpecialisation([FromRoute] string id)
         {
             var specialisation = _specialisationRepository.GetSpecialisationById(id);
             return new OkObjectResult(specialisation);
@@ -66,7 +66,7 @@ namespace groupsapi.Controllers
 
         // DELETE: Specialisations/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteSpecialisation([FromRoute] Guid id)
+        public IActionResult DeleteSpecialisation([FromRoute] string id)
         {
             _specialisationRepository.Delete(id);
             return new OkResult();

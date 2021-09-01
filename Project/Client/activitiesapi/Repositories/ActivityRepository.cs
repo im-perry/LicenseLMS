@@ -15,7 +15,7 @@ namespace activitiesapi.Repositories
             _dbContext = dbContext;
         }
 
-        public Activity GetActivityById(Guid activityId)
+        public Activity GetActivityById(string activityId)
         {
             return _dbContext.Activities.Find(activityId);
         }
@@ -31,7 +31,7 @@ namespace activitiesapi.Repositories
             Save();
         }
 
-        public void Delete(Guid activityId)
+        public void Delete(string activityId)
         {
             var activity = _dbContext.Activities.Find(activityId);
             _dbContext.Activities.Remove(activity);
@@ -40,7 +40,19 @@ namespace activitiesapi.Repositories
 
         public void Update(Activity activity)
         {
-            _dbContext.Entry(activity).State = EntityState.Modified;
+            var update = _dbContext.Activities
+                            .Where(update => update.ActivityId.Equals(activity.ActivityId))
+                            .SingleOrDefault();
+
+            if(update != default(Activity))
+            {
+                update.Name = activity.Name;
+                update.Duration = activity.Duration;
+                update.Year = activity.Year;
+                update.Level = activity.Level;
+                update.Type = activity.Type;
+            }
+            
             Save();
         }
 

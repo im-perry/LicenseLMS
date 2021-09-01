@@ -29,7 +29,7 @@ namespace teachingapi.Controllers
 
         // GET: Classes/5
         [HttpGet("{id}")]
-        public IActionResult GetClass([FromRoute] Guid id)
+        public IActionResult GetClass([FromRoute] string id)
         {
             var classs = _classRepository.GetClassById(id);
             return new OkObjectResult(classs);
@@ -66,7 +66,7 @@ namespace teachingapi.Controllers
 
         // DELETE: Classes/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteClass([FromRoute] Guid id)
+        public IActionResult DeleteClass([FromRoute] string id)
         {
             _classRepository.Delete(id);
             return new OkResult();

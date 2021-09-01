@@ -6,10 +6,10 @@ namespace teachingapi.Repositories
 {
     public interface ILessonRepository
     {
-        ClassLesson GetLessonById(Guid lessonId);
+        ClassLesson GetLessonById(string lessonId);
         IEnumerable<ClassLesson> GetAll();
         void Add(ClassLesson lesson);
-        void Delete(Guid lessonId);
+        void Delete(string lessonId);
         void Update(ClassLesson lesson);
         void Save();
     }

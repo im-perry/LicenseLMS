@@ -10,7 +10,7 @@ using scheduleapi;
 namespace scheduleapi.Migrations
 {
     [DbContext(typeof(ScheduleContext))]
-    [Migration("20210820185728_initial")]
+    [Migration("20210901205147_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,9 +23,8 @@ namespace scheduleapi.Migrations
 
             modelBuilder.Entity("ActivitiesAPI.Models.Activity", b =>
                 {
-                    b.Property<Guid>("ActivityId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("ActivityId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("Duration")
                         .HasColumnType("int");
@@ -49,24 +48,23 @@ namespace scheduleapi.Migrations
 
             modelBuilder.Entity("GroupsAPI.Models.Group", b =>
                 {
-                    b.Property<Guid>("GroupId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("GroupId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("ScheduleId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("ScheduleId")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("SpecialisationId")
-                        .HasColumnType("int");
+                    b.Property<string>("SpecialisationId")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<Guid?>("SpecialisationId1")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("SpecialisationName")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TutorId")
-                        .HasColumnType("int");
+                    b.Property<string>("TutorName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Year")
                         .HasColumnType("int");
@@ -75,16 +73,15 @@ namespace scheduleapi.Migrations
 
                     b.HasIndex("ScheduleId");
 
-                    b.HasIndex("SpecialisationId1");
+                    b.HasIndex("SpecialisationId");
 
                     b.ToTable("Group");
                 });
 
             modelBuilder.Entity("GroupsAPI.Models.Specialisation", b =>
                 {
-                    b.Property<Guid>("SpecialisationId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("SpecialisationId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
@@ -96,18 +93,20 @@ namespace scheduleapi.Migrations
 
             modelBuilder.Entity("GroupsAPI.Models.Subgroup", b =>
                 {
-                    b.Property<Guid>("SubgroupId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("SubgroupId")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<Guid>("GroupId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("GroupId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("GroupName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("ScheduleId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("ScheduleId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("SubgroupId");
 
@@ -120,12 +119,14 @@ namespace scheduleapi.Migrations
 
             modelBuilder.Entity("ScheduleAPI.Models.Schedule", b =>
                 {
-                    b.Property<Guid>("ScheduleId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("ScheduleId")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<Guid>("ActivityId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("ActivityId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ActivityName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("End")
                         .HasColumnType("datetime2");
@@ -133,8 +134,8 @@ namespace scheduleapi.Migrations
                     b.Property<DateTime>("Start")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("TeacherId")
-                        .HasColumnType("int");
+                    b.Property<string>("TeacherName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ScheduleId");
 
@@ -151,7 +152,7 @@ namespace scheduleapi.Migrations
 
                     b.HasOne("GroupsAPI.Models.Specialisation", "Specialisation")
                         .WithMany()
-                        .HasForeignKey("SpecialisationId1");
+                        .HasForeignKey("SpecialisationId");
 
                     b.Navigation("Specialisation");
                 });
@@ -160,9 +161,7 @@ namespace scheduleapi.Migrations
                 {
                     b.HasOne("GroupsAPI.Models.Group", "Group")
                         .WithMany("Subgroups")
-                        .HasForeignKey("GroupId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("GroupId");
 
                     b.HasOne("ScheduleAPI.Models.Schedule", null)
                         .WithMany("Subgroups")
@@ -175,9 +174,7 @@ namespace scheduleapi.Migrations
                 {
                     b.HasOne("ActivitiesAPI.Models.Activity", "Activity")
                         .WithMany()
-                        .HasForeignKey("ActivityId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ActivityId");
 
                     b.Navigation("Activity");
                 });

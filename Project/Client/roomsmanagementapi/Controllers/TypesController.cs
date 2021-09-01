@@ -29,7 +29,7 @@ namespace roomsmanagementapi.Controllers
 
         // GET: Types/5
         [HttpGet("{id}")]
-        public IActionResult GetRoom([FromRoute] Guid id)
+        public IActionResult GetRoom([FromRoute] string id)
         {
             var type = _typeRepository.GetTypeById(id);
             return new OkObjectResult(type);
@@ -66,7 +66,7 @@ namespace roomsmanagementapi.Controllers
 
         // DELETE: Types/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteType([FromRoute] Guid id)
+        public IActionResult DeleteType([FromRoute] string id)
         {
             _typeRepository.Delete(id);
             return new OkResult();

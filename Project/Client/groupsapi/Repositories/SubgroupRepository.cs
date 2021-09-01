@@ -15,7 +15,7 @@ namespace groupsapi.Repositories
             _dbContext = dbContext;
         }
 
-        public Subgroup GetSubgroupById(Guid activityId)
+        public Subgroup GetSubgroupById(string activityId)
         {
             return _dbContext.Subgroups.Find(activityId);
         }
@@ -31,7 +31,7 @@ namespace groupsapi.Repositories
             Save();
         }
 
-        public void Delete(Guid subgroupId)
+        public void Delete(string subgroupId)
         {
             var subgroup = _dbContext.Subgroups.Find(subgroupId);
             _dbContext.Subgroups.Remove(subgroup);
@@ -40,7 +40,16 @@ namespace groupsapi.Repositories
 
         public void Update(Subgroup subgroup)
         {
-            _dbContext.Entry(subgroup).State = EntityState.Modified;
+            var update = _dbContext.Subgroups
+                            .Where(update => update.SubgroupId.Equals(subgroup.SubgroupId))
+                            .SingleOrDefault();
+
+            if (update != default(Subgroup))
+            {
+                update.Name = subgroup.Name;
+                update.GroupName = subgroup.GroupName;
+            }
+
             Save();
         }
 

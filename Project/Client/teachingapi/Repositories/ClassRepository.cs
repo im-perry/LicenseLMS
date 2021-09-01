@@ -15,7 +15,7 @@ namespace teachingapi.Repositories
             _dbContext = dbContext;
         }
 
-        public Class GetClassById(Guid classId)
+        public Class GetClassById(string classId)
         {
             return _dbContext.Classes.Find(classId);
         }
@@ -31,7 +31,7 @@ namespace teachingapi.Repositories
             Save();
         }
 
-        public void Delete(Guid classId)
+        public void Delete(string classId)
         {
             var classs = _dbContext.Classes.Find(classId);
             _dbContext.Classes.Remove(classs);
@@ -40,7 +40,21 @@ namespace teachingapi.Repositories
 
         public void Update(Class classs)
         {
-            _dbContext.Entry(classs).State = EntityState.Modified;
+            var update = _dbContext.Classes
+                            .Where(update => update.ClassId.Equals(classs.ClassId))
+                            .SingleOrDefault();
+
+            if (update != default(Class))
+            {
+                update.Name = classs.Name;
+                update.ActivityName = classs.ActivityName;
+                update.AuthorName = classs.AuthorName;
+                update.Name = classs.Name;
+                update.Description = classs.Description;
+                update.Groups = classs.Groups;
+                update.Subgroups = classs.Subgroups;
+            }
+
             Save();
         }
 

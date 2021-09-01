@@ -29,7 +29,7 @@ namespace activitiesapi.Controllers
 
         // GET: Activities/5
         [HttpGet("{id}")]
-        public IActionResult GetActivity([FromRoute] Guid id)
+        public IActionResult GetActivity([FromRoute] string id)
         {
             var activity = _activityRepository.GetActivityById(id);
             return new OkObjectResult(activity);
@@ -66,7 +66,7 @@ namespace activitiesapi.Controllers
 
         // DELETE: Activities/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteActivity([FromRoute] Guid id)
+        public IActionResult DeleteActivity([FromRoute] string id)
         {
             _activityRepository.Delete(id);
             return new OkResult();

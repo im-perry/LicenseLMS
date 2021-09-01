@@ -6,10 +6,10 @@ namespace scheduleapi.Repositories
 {
     public interface IScheduleRepository
     {
-        Schedule GetScheduleById(Guid scheduleId);
+        Schedule GetScheduleById(string scheduleId);
         IEnumerable<Schedule> GetAll();
         void Add(Schedule schedule);
-        void Delete(Guid scheduleId);
+        void Delete(string scheduleId);
         void Update(Schedule schedule);
         void Save();
     }

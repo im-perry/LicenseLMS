@@ -14,7 +14,7 @@ namespace groupsapi.Repositories
             _dbContext = dbContext;
         }
 
-        public Specialisation GetSpecialisationById(Guid specialisationId)
+        public Specialisation GetSpecialisationById(string specialisationId)
         {
             return _dbContext.Specialisations.Find(specialisationId);
         }
@@ -30,7 +30,7 @@ namespace groupsapi.Repositories
             Save();
         }
 
-        public void Delete(Guid specialisationId)
+        public void Delete(string specialisationId)
         {
             var specialisation = _dbContext.Specialisations.Find(specialisationId);
             _dbContext.Specialisations.Remove(specialisation);
@@ -39,7 +39,15 @@ namespace groupsapi.Repositories
 
         public void Update(Specialisation specialisation)
         {
-            _dbContext.Entry(specialisation).State = EntityState.Modified;
+            var update = _dbContext.Specialisations
+                            .Where(update => update.SpecialisationId.Equals(specialisation.SpecialisationId))
+                            .SingleOrDefault();
+
+            if (update != default(Specialisation))
+            {
+                update.Name = specialisation.Name;
+            }
+
             Save();
         }
 

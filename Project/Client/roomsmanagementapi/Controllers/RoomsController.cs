@@ -29,7 +29,7 @@ namespace roomsmanagementapi.Controllers
 
         // GET: Rooms/5
         [HttpGet("{id}")]
-        public IActionResult GetRoom([FromRoute] Guid id)
+        public IActionResult GetRoom([FromRoute] string id)
         {
             var room = _roomRepository.GetRoomById(id);
             return new OkObjectResult(room);
@@ -66,7 +66,7 @@ namespace roomsmanagementapi.Controllers
 
         // DELETE: Rooms/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteRoom([FromRoute] Guid id)
+        public IActionResult DeleteRoom([FromRoute] string id)
         {
             _roomRepository.Delete(id);
             return new OkResult();

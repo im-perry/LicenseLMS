@@ -29,7 +29,7 @@ namespace groupsapi.Controllers
 
         // GET: Groups/5
         [HttpGet("{id}")]
-        public IActionResult GetGroup([FromRoute] Guid id)
+        public IActionResult GetGroup([FromRoute] string id)
         {
             var group = _groupRepository.GetGroupById(id);
             return new OkObjectResult(group);
@@ -66,7 +66,7 @@ namespace groupsapi.Controllers
 
         // DELETE: Groups/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteGroup([FromRoute] Guid id)
+        public IActionResult DeleteGroup([FromRoute] string id)
         {
             _groupRepository.Delete(id);
             return new OkResult();

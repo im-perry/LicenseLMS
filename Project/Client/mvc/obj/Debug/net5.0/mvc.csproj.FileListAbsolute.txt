@@ -316,7 +316,6 @@ D:\Facultate\LicenseLMS\Project\Client\mvc\obj\Debug\net5.0\Razor\Views\ClassesM
 D:\Facultate\LicenseLMS\Project\Client\mvc\obj\Debug\net5.0\Razor\Views\ClassesMVC\Details.cshtml.g.cs
 D:\Facultate\LicenseLMS\Project\Client\mvc\obj\Debug\net5.0\Razor\Views\ClassesMVC\Edit.cshtml.g.cs
 D:\Facultate\LicenseLMS\Project\Client\mvc\obj\Debug\net5.0\Razor\Views\ClassesMVC\Index.cshtml.g.cs
-D:\Facultate\LicenseLMS\Project\Client\mvc\bin\Debug\net5.0\activitiesapi.StaticWebAssets.xml
 D:\Facultate\LicenseLMS\Project\Client\mvc\obj\Debug\net5.0\Razor\Views\LessonsMVC\Create.cshtml.g.cs
 D:\Facultate\LicenseLMS\Project\Client\mvc\obj\Debug\net5.0\Razor\Views\LessonsMVC\Delete.cshtml.g.cs
 D:\Facultate\LicenseLMS\Project\Client\mvc\obj\Debug\net5.0\Razor\Views\LessonsMVC\Details.cshtml.g.cs

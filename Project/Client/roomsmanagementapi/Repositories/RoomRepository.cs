@@ -15,7 +15,7 @@ namespace roomsmanagementapi.Repositories
             _dbContext = dbContext;
         }
 
-        public Room GetRoomById(Guid roomId)
+        public Room GetRoomById(string roomId)
         {
             return _dbContext.Rooms.Find(roomId);
         }
@@ -31,7 +31,7 @@ namespace roomsmanagementapi.Repositories
             Save();
         }
 
-        public void Delete(Guid roomId)
+        public void Delete(string roomId)
         {
             var room = _dbContext.Rooms.Find(roomId);
             _dbContext.Rooms.Remove(room);
@@ -40,7 +40,17 @@ namespace roomsmanagementapi.Repositories
 
         public void Update(Room room)
         {
-            _dbContext.Entry(room).State = EntityState.Modified;
+            var update = _dbContext.Rooms
+                            .Where(update => update.RoomId.Equals(room.RoomId))
+                            .SingleOrDefault();
+
+            if (update != default(Room))
+            {
+                update.Name = room.Name;
+                update.Capacity = room.Capacity;
+                update.TypeName = room.TypeName;
+            }
+
             Save();
         }
 

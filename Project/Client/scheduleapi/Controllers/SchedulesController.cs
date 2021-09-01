@@ -29,7 +29,7 @@ namespace scheduleapi.Controllers
 
         // GET: Schedules/5
         [HttpGet("{id}")]
-        public IActionResult GetSchedule([FromRoute] Guid id)
+        public IActionResult GetSchedule([FromRoute] string id)
         {
             var schedule = _scheduleRepository.GetScheduleById(id);
             return new OkObjectResult(schedule);
@@ -66,7 +66,7 @@ namespace scheduleapi.Controllers
 
         // DELETE: Schedules/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteSchedule([FromRoute] Guid id)
+        public IActionResult DeleteSchedule([FromRoute] string id)
         {
             _scheduleRepository.Delete(id);
             return new OkResult();

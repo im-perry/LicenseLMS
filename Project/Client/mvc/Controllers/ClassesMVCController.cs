@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using TeachingAPI.Client;
 using TeachingAPI.Models;
@@ -37,6 +38,8 @@ namespace mvc.Controllers
                 await apiClient.CreateClass(classs);
                 return RedirectToAction("Index");
             }
+            //classs.AuthorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             return View(classs);
         }
 

@@ -6,10 +6,10 @@ namespace roomsmanagementapi.Repositories
 {
     public interface IRoomRepository
     {
-        Room GetRoomById(Guid roomId);
+        Room GetRoomById(string roomId);
         IEnumerable<Room> GetAll();
         void Add(Room room);
-        void Delete(Guid roomId);
+        void Delete(string roomId);
         void Update(Room room);
         void Save();
     }

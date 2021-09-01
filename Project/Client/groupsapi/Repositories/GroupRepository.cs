@@ -15,7 +15,7 @@ namespace groupsapi.Repositories
             _dbContext = dbContext;
         }
 
-        public Group GetGroupById(Guid groupId)
+        public Group GetGroupById(string groupId)
         {
             return _dbContext.Groups.Find(groupId);
         }
@@ -31,7 +31,7 @@ namespace groupsapi.Repositories
             Save();
         }
 
-        public void Delete(Guid groupId)
+        public void Delete(string groupId)
         {
             var group = _dbContext.Groups.Find(groupId);
             _dbContext.Groups.Remove(group);
@@ -40,7 +40,19 @@ namespace groupsapi.Repositories
 
         public void Update(Group group)
         {
-            _dbContext.Entry(group).State = EntityState.Modified;
+            var update = _dbContext.Groups
+                            .Where(update => update.GroupId.Equals(group.GroupId))
+                            .SingleOrDefault();
+
+            if (update != default(Group))
+            {
+                update.Name = group.Name;
+                update.Year = group.Year;
+                update.TutorName = group.TutorName;
+                update.SpecialisationName = group.SpecialisationName;
+                update.Subgroups = group.Subgroups;
+            }
+
             Save();
         }
 
