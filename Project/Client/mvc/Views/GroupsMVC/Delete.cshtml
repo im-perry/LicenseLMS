@@ -47,12 +47,6 @@
                         <dd class="col-sm-10">
                             @Html.DisplayFor(model => model.SpecialisationName)
                         </dd>
-                        <dt class="col-sm-2">
-                            @Html.DisplayNameFor(model => model.Subgroups)
-                        </dt>
-                        <dd class="col-sm-10">
-                            @Html.DisplayFor(model => model.Subgroups)
-                        </dd>
                     </dl>
                     <form asp-action="Delete">
                         <input type="hidden" asp-for="GroupId" />

@@ -14,7 +14,7 @@ namespace groupsapi.Repositories
             _dbContext = dbContext;
         }
 
-        public Specialisation GetSpecialisationById(string specialisationId)
+        public Specialisation GetSpecialisationById(Guid specialisationId)
         {
             return _dbContext.Specialisations.Find(specialisationId);
         }
@@ -30,7 +30,7 @@ namespace groupsapi.Repositories
             Save();
         }
 
-        public void Delete(string specialisationId)
+        public void Delete(Guid specialisationId)
         {
             var specialisation = _dbContext.Specialisations.Find(specialisationId);
             _dbContext.Specialisations.Remove(specialisation);

@@ -109,6 +109,33 @@ namespace ActivitiesAPI.Client
             
         }
 
+        public async Task<Activity> GetActivityByName(string name)
+        {
+            var tokenResponse = await _tokenService.GetToken("activitiesapi.read");
+
+            _httpClient
+                .SetBearerToken(tokenResponse.AccessToken);
+
+            _httpClient.BaseAddress = new Uri("https://localhost:5445/");
+
+            var request = new HttpRequestMessage(HttpMethod.Get, $"Activities/GetActivityByName/{name}");
+
+            var response = await _httpClient.SendAsync(request);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var readTask = response.Content.ReadAsAsync<Activity>();
+                readTask.Wait();
+
+                return readTask.Result;
+            }
+            else
+            {
+                throw new Exception("Unable to get content");
+            }
+
+        }
+
         public async Task DeleteActivity(Guid id)
         {
             var tokenResponse = await _tokenService.GetToken("activitiesapi.read");

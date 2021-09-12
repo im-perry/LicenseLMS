@@ -9,9 +9,13 @@ namespace TeachingAPI.Models
     public class Class
     {
         [Key]
-        public string ClassId { get; set; }
+        public Guid ClassId { get; set; }
+
+        [Display(Name = "")]
         public string ActivityName { get; set; }
-        public Activity Activity { get; set; }
+        public IEnumerable<Activity> Activities { get; set; }
+
+        [Display(Name = "Author Name")]
         public string AuthorName { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
@@ -23,7 +27,7 @@ namespace TeachingAPI.Models
         {
             Class classs = new Class
             {
-                ClassId = Guid.NewGuid().ToString(),
+                ClassId = Guid.NewGuid(),
                 ActivityName = activityName,
                 AuthorName = authorName,
                 Name = name,

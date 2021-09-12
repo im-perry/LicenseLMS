@@ -15,7 +15,7 @@ namespace groupsapi.Repositories
             _dbContext = dbContext;
         }
 
-        public Group GetGroupById(string groupId)
+        public Group GetGroupById(Guid groupId)
         {
             return _dbContext.Groups.Find(groupId);
         }
@@ -31,7 +31,7 @@ namespace groupsapi.Repositories
             Save();
         }
 
-        public void Delete(string groupId)
+        public void Delete(Guid groupId)
         {
             var group = _dbContext.Groups.Find(groupId);
             _dbContext.Groups.Remove(group);
@@ -50,7 +50,6 @@ namespace groupsapi.Repositories
                 update.Year = group.Year;
                 update.TutorName = group.TutorName;
                 update.SpecialisationName = group.SpecialisationName;
-                update.Subgroups = group.Subgroups;
             }
 
             Save();

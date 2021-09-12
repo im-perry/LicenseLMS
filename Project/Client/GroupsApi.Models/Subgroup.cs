@@ -1,19 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace GroupsAPI.Models
 {
     public class Subgroup
     {
-        public string SubgroupId { get; set; }
+        public Guid SubgroupId { get; set; }
         public string Name { get; set; }
+
+        [Display(Name = "Group Name")]
         public string GroupName { get; set; }
-        public Group Group { get; set; }
+        public IEnumerable<Group> Groups { get; set; }
 
         public static Subgroup Create(string name, string groupName)
         {
             Subgroup subgroup = new Subgroup
             {
-                SubgroupId = Guid.NewGuid().ToString(),
+                SubgroupId = Guid.NewGuid(),
                 Name = name,
                 GroupName = groupName
             };

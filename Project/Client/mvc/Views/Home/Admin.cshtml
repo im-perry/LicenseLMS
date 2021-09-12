@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Admin Page";
+}
+
+<button class="btn btn-dark text-white" style="margin-top: 5%; margin-left: 2%;" onclick="history.go(-1);"><i class="fas fa-angle-left" style="margin-right: 10px;"></i>Return</button>
+
+<div style="margin-top: 5%;">
+    <div class="row">
+        <div class="col-md-3" style="margin-left: 2%; margin-right: 2%;">
+            <div class="card" style="width: 18rem; height: 12rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Manage Activities</h5>
+                    <p class="card-text">View and modify any activity.</p>
+                    <a class="btn btn-dark text-white" style="border-radius: 4px; bottom: 0; position: absolute; margin-bottom: 10px;" asp-area="" asp-controller="ActivitiesMVC" asp-action="Index">Manage</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3" style="margin-left: 2%; margin-right: 2%;">
+            <div class="card" style="width: 18rem; height: 12rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Manage Groups</h5>
+                    <p class="card-text">View and modify any groups, subgroups and specializations.</p>
+                    <a class="btn btn-dark text-white" style="border-radius: 4px; bottom: 0; position: absolute; margin-bottom: 10px;" asp-area="" asp-controller="Home" asp-action="Groups">Manage</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3" style="margin-left: 2%; margin-right: 2%;">
+            <div class="card" style="width: 18rem; height: 12rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Manage Schedules</h5>
+                    <p class="card-text">View and modify schedules.</p>
+                    <a class="btn btn-dark text-white" style="border-radius: 4px; bottom: 0; position: absolute; margin-bottom: 10px;" asp-area="" asp-controller="SchedulesMVC" asp-action="Index">Manage</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-md-3" style="margin-left: 2%; margin-right: 2%;">
+            <div class="card" style="width: 18rem; height: 12rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Manage Rooms</h5>
+                    <p class="card-text">View and modify any room.</p>
+                    <a class="btn btn-dark text-white" style="border-radius: 4px; bottom: 0; position: absolute; margin-bottom: 10px;" asp-area="" asp-controller="Home" asp-action="Rooms">Manage</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3" style="margin-left: 2%; margin-right: 2%;">
+            <div class="card" style="width: 18rem; height: 12rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Manage Classes</h5>
+                    <p class="card-text">View and modify any class.</p>
+                    <a class="btn btn-dark text-white" style="border-radius: 4px; bottom: 0; position: absolute; margin-bottom: 10px;" asp-area="" asp-controller="ClassesMVC" asp-action="Index">Manage</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

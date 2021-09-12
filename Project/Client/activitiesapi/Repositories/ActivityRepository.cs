@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace activitiesapi.Repositories
 {
@@ -15,9 +16,16 @@ namespace activitiesapi.Repositories
             _dbContext = dbContext;
         }
 
-        public Activity GetActivityById(string activityId)
+        public Activity GetActivityById(Guid activityId)
         {
             return _dbContext.Activities.Find(activityId);
+        }
+
+        public Activity GetActivityByName(string activityName)
+        {
+            return _dbContext.Activities
+                            .Where(activity => activity.Name.Equals(activityName))
+                            .SingleOrDefault();
         }
 
         public IEnumerable<Activity> GetAll()
@@ -31,7 +39,7 @@ namespace activitiesapi.Repositories
             Save();
         }
 
-        public void Delete(string activityId)
+        public void Delete(Guid activityId)
         {
             var activity = _dbContext.Activities.Find(activityId);
             _dbContext.Activities.Remove(activity);

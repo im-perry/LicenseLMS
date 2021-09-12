@@ -11,9 +11,11 @@ namespace mvc.Controllers
     public class RoomsMVCController : Controller
     {
         public readonly RoomsAPIClient apiClient;
-        public RoomsMVCController(RoomsAPIClient apiClient)
+        public readonly TypesAPIClient typeClient;
+        public RoomsMVCController(RoomsAPIClient apiClient, TypesAPIClient typeClient)
         {
             this.apiClient = apiClient;
+            this.typeClient = typeClient;
         }
 
         public async Task<IActionResult> Index()
@@ -22,9 +24,11 @@ namespace mvc.Controllers
             return View(data);
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            return View(new Room());
+            Room room = new Room();
+            room.Types = await typeClient.GetAllTypes();
+            return View(room);
         }
 
         [HttpPost]
@@ -62,6 +66,7 @@ namespace mvc.Controllers
         public async Task<IActionResult> Edit(Guid id)
         {
             var data = await apiClient.GetDetails(id);
+            data.Types = await typeClient.GetAllTypes();
             return View(data);
         }
 

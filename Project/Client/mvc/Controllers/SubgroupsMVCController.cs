@@ -11,9 +11,11 @@ namespace mvc.Controllers
     public class SubgroupsMVCController : Controller
     {
         public readonly SubgroupsAPIClient apiClient;
-        public SubgroupsMVCController(SubgroupsAPIClient apiClient)
+        public readonly GroupsAPIClient groupClient;
+        public SubgroupsMVCController(SubgroupsAPIClient apiClient, GroupsAPIClient groupClient)
         {
             this.apiClient = apiClient;
+            this.groupClient = groupClient;
         }
 
         public async Task<IActionResult> Index()
@@ -22,9 +24,12 @@ namespace mvc.Controllers
             return View(data);
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            return View(new Subgroup());
+            Subgroup subgroup = new Subgroup();
+            subgroup.Groups = await groupClient.GetAllGroups();
+
+            return View(subgroup);
         }
 
         [HttpPost]
@@ -62,6 +67,8 @@ namespace mvc.Controllers
         public async Task<IActionResult> Edit(Guid id)
         {
             var data = await apiClient.GetDetails(id);
+            data.Groups = await groupClient.GetAllGroups();
+
             return View(data);
         }
 

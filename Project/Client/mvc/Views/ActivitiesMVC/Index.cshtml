@@ -4,8 +4,9 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<button class="btn btn-dark text-white" style="margin-top: 5%;" onclick="history.go(-1);"><i class="fas fa-angle-left" style="margin-right: 10px;"></i>Return</button>
 
-<h1>Activities</h1>
+<h1 style="margin-top: 5%;">Activities</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -32,29 +33,31 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Duration)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Year)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Level)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Type)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new {  id=item.ActivityId  }) |
-                @Html.ActionLink("Details", "Details", new {  id=item.ActivityId }) |
-                @Html.ActionLink("Delete", "Delete", new {  id=item.ActivityId })
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Duration)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Year)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Level)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ActivityId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ActivityId }) |
+                    @Html.ActionLink("Details by name", "DetailsByName", new { name = item.Name }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ActivityId })
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

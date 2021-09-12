@@ -43,9 +43,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScheduleAPI.Models", "Sched
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TeachingService", "TeachingService", "{8EAB2950-2C73-4E72-BE35-E17C2DC50591}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeachingAPI.Client", "TeachingAPI.Client\TeachingAPI.Client.csproj", "{89933A14-953E-4E7C-86EA-D175917E900F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeachingAPI.Client", "TeachingAPI.Client\TeachingAPI.Client.csproj", "{89933A14-953E-4E7C-86EA-D175917E900F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeachingAPI.Models", "TEachingAPI.Models\TeachingAPI.Models.csproj", "{3B666C32-6B10-4D12-8E12-AE87989DC913}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeachingAPI.Models", "TEachingAPI.Models\TeachingAPI.Models.csproj", "{3B666C32-6B10-4D12-8E12-AE87989DC913}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

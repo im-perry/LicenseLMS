@@ -4,8 +4,9 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<button class="btn btn-dark text-white" style="margin-top: 5%;" onclick="history.go(-1);"><i class="fas fa-angle-left" style="margin-right: 10px;"></i>Return</button>
 
-<h1>Subgroups</h1>
+<h1 style="margin-top: 5%;">Subgroups</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -23,20 +24,21 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GroupName)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new {  id=item.SubgroupId }) |
-                @Html.ActionLink("Details", "Details", new {  id=item.SubgroupId }) |
-                @Html.ActionLink("Delete", "Delete", new {  id=item.SubgroupId })
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GroupName)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.SubgroupId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.SubgroupId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.SubgroupId })
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

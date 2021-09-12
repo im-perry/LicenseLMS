@@ -15,7 +15,7 @@ namespace roomsmanagementapi.Repositories
             _dbContext = dbContext;
         }
 
-        public Type GetTypeById(string typeId)
+        public Type GetTypeById(Guid typeId)
         {
             return _dbContext.Types.Find(typeId);
         }
@@ -31,7 +31,7 @@ namespace roomsmanagementapi.Repositories
             Save();
         }
 
-        public void Delete(string typeId)
+        public void Delete(Guid typeId)
         {
             var room = _dbContext.Types.Find(typeId);
             _dbContext.Types.Remove(room);

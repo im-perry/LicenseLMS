@@ -1,4 +1,4 @@
-﻿using GroupsAPI.Client;
+﻿using ActivitiesAPI.Client;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -13,9 +13,12 @@ namespace mvc.Controllers
     public class ClassesMVCController : Controller
     {
         public readonly ClassesAPIClient apiClient;
-        public ClassesMVCController(ClassesAPIClient apiClient)
+        public readonly ActivitiesAPIClient activitiesClient;
+
+        public ClassesMVCController(ClassesAPIClient apiClient, ActivitiesAPIClient activitiesClient)
         {
             this.apiClient = apiClient;
+            this.activitiesClient = activitiesClient;
         }
 
         public async Task<IActionResult> Index()
@@ -24,9 +27,12 @@ namespace mvc.Controllers
             return View(data);
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            return View(new Class());
+            Class classs = new Class();
+            classs.Activities = await activitiesClient.GetAllActivities();
+
+            return View(classs);
         }
 
         [HttpPost]
@@ -35,11 +41,11 @@ namespace mvc.Controllers
         {
             if (ModelState.IsValid)
             {
+                classs.AuthorName = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 await apiClient.CreateClass(classs);
                 return RedirectToAction("Index");
             }
-            //classs.AuthorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
             return View(classs);
         }
 
@@ -63,9 +69,17 @@ namespace mvc.Controllers
             return View(data);
         }
 
+        public async Task<IActionResult> Activity(string name)
+        {
+            var data = await activitiesClient.GetActivityByName(name);
+            return View(data);
+        }
+
         public async Task<IActionResult> Edit(Guid id)
         {
             var data = await apiClient.GetDetails(id);
+            data.Activities = await activitiesClient.GetAllActivities();
+
             return View(data);
         }
 

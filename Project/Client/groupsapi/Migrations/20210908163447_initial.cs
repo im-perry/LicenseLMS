@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace groupsapi.Migrations
 {
@@ -7,53 +8,53 @@ namespace groupsapi.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Specialisations",
+                name: "Subgroups",
                 columns: table => new
                 {
-                    SpecialisationId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    SubgroupId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    GroupName = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Specialisations", x => x.SpecialisationId);
+                    table.PrimaryKey("PK_Subgroups", x => x.SubgroupId);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Groups",
                 columns: table => new
                 {
-                    GroupId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    GroupId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Year = table.Column<int>(type: "int", nullable: false),
                     TutorName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SpecialisationName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    SpecialisationId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    SubgroupId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Groups", x => x.GroupId);
                     table.ForeignKey(
-                        name: "FK_Groups_Specialisations_SpecialisationId",
-                        column: x => x.SpecialisationId,
-                        principalTable: "Specialisations",
-                        principalColumn: "SpecialisationId",
+                        name: "FK_Groups_Subgroups_SubgroupId",
+                        column: x => x.SubgroupId,
+                        principalTable: "Subgroups",
+                        principalColumn: "SubgroupId",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Subgroups",
+                name: "Specialisations",
                 columns: table => new
                 {
-                    SubgroupId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    SpecialisationId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    GroupName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    GroupId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    GroupId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Subgroups", x => x.SubgroupId);
+                    table.PrimaryKey("PK_Specialisations", x => x.SpecialisationId);
                     table.ForeignKey(
-                        name: "FK_Subgroups_Groups_GroupId",
+                        name: "FK_Specialisations_Groups_GroupId",
                         column: x => x.GroupId,
                         principalTable: "Groups",
                         principalColumn: "GroupId",
@@ -61,26 +62,26 @@ namespace groupsapi.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Groups_SpecialisationId",
+                name: "IX_Groups_SubgroupId",
                 table: "Groups",
-                column: "SpecialisationId");
+                column: "SubgroupId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Subgroups_GroupId",
-                table: "Subgroups",
+                name: "IX_Specialisations_GroupId",
+                table: "Specialisations",
                 column: "GroupId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Subgroups");
+                name: "Specialisations");
 
             migrationBuilder.DropTable(
                 name: "Groups");
 
             migrationBuilder.DropTable(
-                name: "Specialisations");
+                name: "Subgroups");
         }
     }
 }

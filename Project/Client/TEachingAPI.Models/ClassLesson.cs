@@ -6,7 +6,9 @@ namespace TeachingAPI.Models
     public class ClassLesson
     {
         [Key]
-        public string LessonId { get; set; }
+        public Guid LessonId { get; set; }
+
+        [Display(Name = "Class Name")]
         public string ClassName { get; set; }
         public Class Class { get; set; }
         public string Name { get; set; }
@@ -16,7 +18,7 @@ namespace TeachingAPI.Models
         {
             ClassLesson lesson = new ClassLesson
             {
-                LessonId = Guid.NewGuid().ToString(),
+                LessonId = Guid.NewGuid(),
                 ClassName = className,
                 Name = name,
                 Description = description

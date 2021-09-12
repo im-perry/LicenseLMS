@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Claims;
 using System.Transactions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -29,7 +30,7 @@ namespace teachingapi.Controllers
 
         // GET: Classes/5
         [HttpGet("{id}")]
-        public IActionResult GetClass([FromRoute] string id)
+        public IActionResult GetClass([FromRoute] Guid id)
         {
             var classs = _classRepository.GetClassById(id);
             return new OkObjectResult(classs);
@@ -59,6 +60,7 @@ namespace teachingapi.Controllers
             using (var scope = new TransactionScope())
             {
                 _classRepository.Add(classs);
+                classs.AuthorName = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 scope.Complete();
                 return CreatedAtAction(nameof(GetClass), new { id = classs.ClassId }, classs);
             }
@@ -66,7 +68,7 @@ namespace teachingapi.Controllers
 
         // DELETE: Classes/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteClass([FromRoute] string id)
+        public IActionResult DeleteClass([FromRoute] Guid id)
         {
             _classRepository.Delete(id);
             return new OkResult();

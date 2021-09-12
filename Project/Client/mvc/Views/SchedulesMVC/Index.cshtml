@@ -4,8 +4,9 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<button class="btn btn-dark text-white" style="margin-top: 5%;" onclick="history.go(-1);"><i class="fas fa-angle-left" style="margin-right: 10px;"></i>Return</button>
 
-<h1>Schedules</h1>
+<h1 style="margin-top: 5%;">Schedules</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -17,19 +18,16 @@
                 @Html.DisplayNameFor(model => model.ActivityName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Groups)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Subgroups)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.TeacherName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Start)
+                @Html.DisplayNameFor(model => model.DayOfTheWeek)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.End)
+                @Html.DisplayNameFor(model => model.StartTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndTime)
             </th>
         </tr>
     </thead>
@@ -41,19 +39,16 @@
                 @Html.DisplayFor(modelItem => item.ActivityName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Groups)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Subgroups)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.TeacherName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Start)
+                @Html.DisplayFor(modelItem => item.DayOfTheWeek)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.End)
+                @Html.DisplayFor(modelItem => item.StartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndTime)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.ScheduleId }) |

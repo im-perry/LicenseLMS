@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Rooms Page";
+}
+
+<button class="btn btn-dark text-white" style="margin-top: 5%;" onclick="history.go(-1);"><i class="fas fa-angle-left" style="margin-right: 10px;"></i>Return</button>
+
+<div style="margin-top: 5%;">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="width: 20rem; height: 12rem;">
+                <p style="padding-left: 5px;">
+                    Here, you can view, create, edit and delete the rooms and their types however you want.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card" style="width: 35rem;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>Rooms</h5>
+                            </div>
+                            <div class="col-md-3" style="align-content: end;">
+                                <a class="btn btn-dark text-white" style="border-radius: 4px;" asp-area="" asp-controller="RoomsMVC" asp-action="Index">Manage</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>Room Types</h5>
+                            </div>
+                            <div class="col-md-3" style="align-content: end;">
+                                <a class="btn btn-dark text-white" style="border-radius: 4px;" asp-area="" asp-controller="RoomTypeMVC" asp-action="Index">Manage</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

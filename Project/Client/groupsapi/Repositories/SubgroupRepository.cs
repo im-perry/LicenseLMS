@@ -15,7 +15,7 @@ namespace groupsapi.Repositories
             _dbContext = dbContext;
         }
 
-        public Subgroup GetSubgroupById(string activityId)
+        public Subgroup GetSubgroupById(Guid activityId)
         {
             return _dbContext.Subgroups.Find(activityId);
         }
@@ -31,7 +31,7 @@ namespace groupsapi.Repositories
             Save();
         }
 
-        public void Delete(string subgroupId)
+        public void Delete(Guid subgroupId)
         {
             var subgroup = _dbContext.Subgroups.Find(subgroupId);
             _dbContext.Subgroups.Remove(subgroup);

@@ -4,14 +4,14 @@ namespace RoomsAPI.Models
 {
     public class Type
     {
-        public string TypeId { get; set; }
+        public Guid TypeId { get; set; }
         public string Name { get; set; }
 
         public static Type Create(string name)
         {
             Type type = new Type
             {
-                TypeId = Guid.NewGuid().ToString(),
+                TypeId = Guid.NewGuid(),
                 Name = name
             };
             return type;

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace roomsmanagementapi.Migrations
 {
@@ -10,7 +11,7 @@ namespace roomsmanagementapi.Migrations
                 name: "Types",
                 columns: table => new
                 {
-                    TypeId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    TypeId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -22,11 +23,11 @@ namespace roomsmanagementapi.Migrations
                 name: "Rooms",
                 columns: table => new
                 {
-                    RoomId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    RoomId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Capacity = table.Column<int>(type: "int", nullable: false),
                     TypeName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TypeId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    TypeId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {

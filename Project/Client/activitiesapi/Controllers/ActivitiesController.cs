@@ -29,9 +29,16 @@ namespace activitiesapi.Controllers
 
         // GET: Activities/5
         [HttpGet("{id}")]
-        public IActionResult GetActivity([FromRoute] string id)
+        public IActionResult GetActivityById([FromRoute] Guid id)
         {
             var activity = _activityRepository.GetActivityById(id);
+            return new OkObjectResult(activity);
+        }
+
+        [Route("GetActivityByName")]
+        public IActionResult GetActivityByName([FromRoute] string name)
+        {
+            var activity = _activityRepository.GetActivityByName(name);
             return new OkObjectResult(activity);
         }
 
@@ -60,13 +67,13 @@ namespace activitiesapi.Controllers
             {
                 _activityRepository.Add(activity);
                 scope.Complete();
-                return CreatedAtAction(nameof(GetActivity), new { id = activity.ActivityId }, activity);
+                return CreatedAtAction(nameof(GetActivityById), new { id = activity.ActivityId }, activity);
             }
         }
 
         // DELETE: Activities/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteActivity([FromRoute] string id)
+        public IActionResult DeleteActivity([FromRoute] Guid id)
         {
             _activityRepository.Delete(id);
             return new OkResult();

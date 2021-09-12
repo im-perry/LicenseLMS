@@ -15,7 +15,7 @@ namespace teachingapi.Repositories
             _dbContext = dbContext;
         }
 
-        public ClassLesson GetLessonById(string lessonId)
+        public ClassLesson GetLessonById(Guid lessonId)
         {
             return _dbContext.ClassLessons.Find(lessonId);
         }
@@ -31,7 +31,7 @@ namespace teachingapi.Repositories
             Save();
         }
 
-        public void Delete(string lessonId)
+        public void Delete(Guid lessonId)
         {
             var lesson = _dbContext.ClassLessons.Find(lessonId);
             _dbContext.ClassLessons.Remove(lesson);

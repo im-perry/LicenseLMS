@@ -4,8 +4,9 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<button class="btn btn-dark text-white" style="margin-top: 5%;" onclick="history.go(-1);"><i class="fas fa-angle-left" style="margin-right: 10px;"></i>Return</button>
 
-<h1>Rooms</h1>
+<h1 style="margin-top: 5%;">Rooms</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -38,9 +39,9 @@
                     @Html.DisplayFor(modelItem => item.TypeName)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id=item.RoomId }) |
-                    @Html.ActionLink("Details", "Details", new { id=item.RoomId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id=item.RoomId })
+                    @Html.ActionLink("Edit", "Edit", new { id = item.RoomId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.RoomId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.RoomId })
                 </td>
             </tr>
         }

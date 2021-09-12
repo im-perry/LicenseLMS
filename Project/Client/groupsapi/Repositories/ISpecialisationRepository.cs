@@ -6,10 +6,10 @@ namespace groupsapi.Repositories
 {
     public interface ISpecialisationRepository
     {
-        Specialisation GetSpecialisationById(string specialisationId);
+        Specialisation GetSpecialisationById(Guid specialisationId);
         IEnumerable<Specialisation> GetAll();
         void Add(Specialisation specialisation);
-        void Delete(string specialisationId);
+        void Delete(Guid specialisationId);
         void Update(Specialisation specialisation);
         void Save();
     }

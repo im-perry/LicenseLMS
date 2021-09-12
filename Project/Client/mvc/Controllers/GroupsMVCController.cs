@@ -11,9 +11,11 @@ namespace mvc.Controllers
     public class GroupsMVCController : Controller
     {
         public readonly GroupsAPIClient apiClient;
-        public GroupsMVCController(GroupsAPIClient apiClient)
+        public readonly SpecializationsAPIClient specializationClient;
+        public GroupsMVCController(GroupsAPIClient apiClient, SubgroupsAPIClient subgroupClient, SpecializationsAPIClient specializationClient)
         {
             this.apiClient = apiClient;
+            this.specializationClient = specializationClient;
         }
 
         public async Task<IActionResult> Index()
@@ -22,9 +24,12 @@ namespace mvc.Controllers
             return View(data);
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            return View(new Group());
+            Group group = new Group();
+            group.Specialisations = await specializationClient.GetAllSpecialisations();
+
+            return View(group);
         }
 
         [HttpPost]
@@ -62,6 +67,8 @@ namespace mvc.Controllers
         public async Task<IActionResult> Edit(Guid id)
         {
             var data = await apiClient.GetDetails(id);
+            data.Specialisations = await specializationClient.GetAllSpecialisations();
+
             return View(data);
         }
 

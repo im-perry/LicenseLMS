@@ -15,7 +15,7 @@ namespace scheduleapi.Repositories
             _dbContext = dbContext;
         }
 
-        public Schedule GetScheduleById(string scheduleId)
+        public Schedule GetScheduleById(Guid scheduleId)
         {
             return _dbContext.Schedules.Find(scheduleId);
         }
@@ -31,7 +31,7 @@ namespace scheduleapi.Repositories
             Save();
         }
 
-        public void Delete(string scheduleId)
+        public void Delete(Guid scheduleId)
         {
             var schedule = _dbContext.Schedules.Find(scheduleId);
             _dbContext.Schedules.Remove(schedule);
@@ -50,8 +50,9 @@ namespace scheduleapi.Repositories
                 update.Groups = schedule.Groups;
                 update.Subgroups = schedule.Subgroups;
                 update.TeacherName = schedule.TeacherName;
-                update.Start = schedule.Start;
-                update.End = schedule.End;
+                update.DayOfTheWeek = schedule.DayOfTheWeek;
+                update.StartTime = schedule.StartTime;
+                update.EndTime = schedule.EndTime;
             }
 
             Save();

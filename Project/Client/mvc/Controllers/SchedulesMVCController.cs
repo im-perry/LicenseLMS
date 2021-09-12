@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using ActivitiesAPI.Client;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ScheduleAPI.Client;
 using ScheduleAPI.Models;
@@ -11,9 +12,11 @@ namespace mvc.Controllers
     public class SchedulesMVCController : Controller
     {
         public readonly ScheduleAPIClient apiClient;
-        public SchedulesMVCController(ScheduleAPIClient apiClient)
+        public readonly ActivitiesAPIClient activitiesClient;
+        public SchedulesMVCController(ScheduleAPIClient apiClient, ActivitiesAPIClient activitiesClient)
         {
             this.apiClient = apiClient;
+            this.activitiesClient = activitiesClient;
         }
 
         public async Task<IActionResult> Index()
@@ -22,9 +25,12 @@ namespace mvc.Controllers
             return View(data);
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            return View(new Schedule());
+            Schedule schedule = new Schedule();
+            schedule.Activities = await activitiesClient.GetAllActivities();
+
+            return View(schedule);
         }
 
         [HttpPost]
@@ -62,6 +68,8 @@ namespace mvc.Controllers
         public async Task<IActionResult> Edit(Guid id)
         {
             var data = await apiClient.GetDetails(id);
+            data.Activities = await activitiesClient.GetAllActivities();
+
             return View(data);
         }
 

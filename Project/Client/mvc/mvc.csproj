@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Content Remove="Views\Home\Activities.cshtml" />
-    <Content Remove="Views\Home\Groups.cshtml" />
     <Content Remove="Views\Home\RoomsManagement.cshtml" />
     <Content Remove="Views\Home\Schedule.cshtml" />
     <Content Remove="Views\Home\Teaching.cshtml" />

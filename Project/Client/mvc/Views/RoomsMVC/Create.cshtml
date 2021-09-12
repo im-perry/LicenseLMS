@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body style="overflow-x: hidden;" class = "">
+<body style="overflow-x: hidden;" class="">
     <div class="container-main">
         <h1>Create</h1>
         <h4>Room</h4>
@@ -37,7 +37,12 @@
                             </div>
                             <div class="form-group">
                                 <label asp-for="TypeName" class="control-label"></label>
-                                <input asp-for="TypeName" class="form-control"/>
+                                <select asp-for="TypeName" class="form-control" required>
+                                    @foreach (var item in Model.Types)
+                                    {
+                                        <option>@Html.DisplayFor(model => item.Name)</option>
+                                    }
+                                </select>
                                 <span asp-validation-for="TypeName" class="text-danger"></span>
                             </div>
                             <div class="form-group">

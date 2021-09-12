@@ -15,7 +15,7 @@ namespace roomsmanagementapi.Repositories
             _dbContext = dbContext;
         }
 
-        public Room GetRoomById(string roomId)
+        public Room GetRoomById(Guid roomId)
         {
             return _dbContext.Rooms.Find(roomId);
         }
@@ -31,7 +31,7 @@ namespace roomsmanagementapi.Repositories
             Save();
         }
 
-        public void Delete(string roomId)
+        public void Delete(Guid roomId)
         {
             var room = _dbContext.Rooms.Find(roomId);
             _dbContext.Rooms.Remove(room);

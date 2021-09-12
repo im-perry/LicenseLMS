@@ -6,10 +6,10 @@ namespace roomsmanagementapi.Repositories
 {
     public interface ITypeRepository
     {
-        Type GetTypeById(string typeId);
+        Type GetTypeById(Guid typeId);
         IEnumerable<Type> GetAll();
         void Add(Type type);
-        void Delete(string typeId);
+        void Delete(Guid typeId);
         void Update(Type type);
         void Save();
     }

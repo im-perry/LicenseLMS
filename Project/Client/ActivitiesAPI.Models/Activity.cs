@@ -17,7 +17,7 @@ namespace ActivitiesAPI.Models
             Labour
         }
 
-        public string ActivityId { get; set; }
+        public Guid ActivityId { get; set; }
         public string Name { get; set; }
         public int Duration { get; set; }
         public int Year { get; set; }
@@ -28,7 +28,7 @@ namespace ActivitiesAPI.Models
         {
             Activity activity = new Activity
             {
-                ActivityId = Guid.NewGuid().ToString(),
+                ActivityId = Guid.NewGuid(),
                 Name = name,
                 Duration = duration,
                 Year = year,

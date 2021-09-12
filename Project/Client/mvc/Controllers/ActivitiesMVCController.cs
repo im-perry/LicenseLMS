@@ -59,6 +59,12 @@ namespace mvc.Controllers
             return View(data);
         }
 
+        public async Task<IActionResult> DetailsByName(string name)
+        {
+            var data = await apiClient.GetActivityByName(name);
+            return View(data);
+        }
+
         public async Task<IActionResult> Edit(Guid id)
         {
             var data = await apiClient.GetDetails(id);
